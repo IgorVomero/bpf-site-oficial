@@ -28,3 +28,26 @@ npm run typecheck
 - Use semantic HTML and browser capabilities for static content. React remains installed but is not loaded by the current page.
 - Share only confirmed styles and assets. Exact local Kumbh Sans and Mulish font files are pending.
 - Implement approved page content in later batches.
+
+## Privacy-policy URLs
+
+The legal text has one maintained copy at `bpf-politicas-privacidade/index.html`.
+Its six sections were transcribed without wording changes from the recovered
+former BPF site page and checked against the archived site HTML.
+
+The canonical public URL is `/bpf-politicas-privacidade/`. On the eventual
+Apache-compatible host, merge this internal rewrite into the existing root
+configuration **before any catch-all rule**:
+
+```apache
+RewriteEngine On
+RewriteRule ^site/politica/?$ /bpf-politicas-privacidade/index.html [END]
+```
+
+This serves the same file at `/site/politica` while keeping that URL in the
+address bar. It is not a browser redirect. Vite's local preview does not apply
+Apache rules, so the alias must be verified when hosting is configured.
+
+The original archived PDFs are kept unchanged at `/site/adesao.pdf` and
+`/site/etica-e-integridade.pdf` for legacy links. They are downloaded only
+when requested.

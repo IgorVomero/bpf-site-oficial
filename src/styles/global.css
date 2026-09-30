@@ -300,6 +300,28 @@ h1 {
   line-height: 1.5;
 }
 
+.site-footer__stores {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.site-footer__stores a {
+  display: inline-flex;
+  width: fit-content;
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: var(--radius-small);
+  background: #000;
+}
+
+.site-footer__stores a:hover {
+  border-color: rgb(255 255 255 / 65%);
+}
+
+.site-footer__stores img {
+  width: 10rem;
+  height: auto;
+}
+
 .site-footer a {
   overflow-wrap: anywhere;
   text-decoration: none;

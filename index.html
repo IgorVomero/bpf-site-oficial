@@ -3,30 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BPF Cartões</title>
+    <title>BPF Cartões | Benefícios para empresas, usuários e estabelecimentos</title>
+    <meta name="description" content="Conheça a BPF Cartões e acesse os canais para empresas, usuários e estabelecimentos." />
+    <link rel="canonical" href="https://bpfcartoes.com.br/" />
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/home.css" />
   </head>
-  <body>
+  <body class="home-page">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="site-header">
+    <header class="site-header site-header--home">
       <div class="container site-header__inner">
         <a class="site-brand" href="/" aria-label="BPF Cartões — início">
-          <img src="/bpf-logo.png" alt="BPF Cartões" width="110" height="70" />
+          <img src="/home/logo-white.webp" alt="BPF Cartões" width="110" height="68" />
         </a>
 
         <nav class="site-nav" aria-label="Navegação principal">
-          <a href="/" aria-current="page">Início</a>
-          <a href="mailto:faleconosco@bpfcartoes.com.br">Fale conosco</a>
+          <a href="#empresas">Empresas</a>
+          <a href="#usuarios">Usuários</a>
+          <a href="#estabelecimentos">Estabelecimentos</a>
         </nav>
+
+        <a class="header-contact" href="#contato">Fale conosco</a>
       </div>
     </header>
 
-    <main id="conteudo" class="site-main">
-      <div class="container">
-        <h1>BPF Cartões</h1>
-        <p>BPF Instituição de Pagamentos Ltda.</p>
+    <main id="conteudo">
+      <section class="home-hero" aria-labelledby="home-title">
+        <picture class="home-hero__media">
+          <source media="(max-width: 48rem)" srcset="/home/hero-960.webp 1x, /home/hero-1920.webp 2x" />
+          <img src="/home/hero-1920.webp" alt="" width="1920" height="1345" fetchpriority="high" />
+        </picture>
+        <div class="container home-hero__content">
+          <h1 id="home-title">Esqueça tudo que você sabe sobre benefícios</h1>
+          <p>BPF Cartões para empresas, usuários e estabelecimentos.</p>
+          <a class="home-button" href="#publicos">Conheça a BPF Cartões <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="home-audiences" id="publicos" aria-label="Públicos da BPF Cartões">
+        <div class="container home-audiences__panel">
+          <article>
+            <h2>Para empresas</h2>
+            <p>Portal das empresas</p>
+            <a href="#empresas">Ver seção de empresas</a>
+          </article>
+          <article>
+            <h2>Para usuários</h2>
+            <p>Aplicativo BPF Cartões</p>
+            <a href="#usuarios">Ver seção de usuários</a>
+          </article>
+          <article>
+            <h2>Para estabelecimentos</h2>
+            <p>Área dos estabelecimentos credenciados</p>
+            <a href="#estabelecimentos">Ver seção de estabelecimentos</a>
+          </article>
+        </div>
+      </section>
+
+      <div class="container home-solutions">
+        <section class="solution-row" id="empresas">
+          <div class="solution-row__copy">
+            <h2>Soluções para sua empresa</h2>
+            <p>Acesse o Portal das Empresas da BPF Cartões.</p>
+            <a class="home-button" href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Portal das empresas <span aria-hidden="true">↗</span></a>
+          </div>
+          <img src="/home/companies.webp" alt="Pessoa analisando documentos e gráficos" width="634" height="444" loading="lazy" decoding="async" />
+        </section>
+
+        <section class="solution-row solution-row--image-first" id="usuarios">
+          <div class="solution-row__copy">
+            <h2>Soluções para usuários</h2>
+            <p>Encontre o aplicativo BPF Cartões nas lojas oficiais.</p>
+            <div class="solution-row__links">
+              <a class="home-button" href="https://play.google.com/store/apps/details?hl=pt&amp;id=br.com.bpfcartoes.app" target="_blank" rel="noopener noreferrer">Google Play <span aria-hidden="true">↗</span></a>
+              <a class="home-button home-button--outline" href="https://apps.apple.com/br/app/bpf-cart%C3%B5es/id1579950979" target="_blank" rel="noopener noreferrer">App Store <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <img src="/home/users.webp" alt="Pessoa consultando o celular em um estabelecimento" width="634" height="444" loading="lazy" decoding="async" />
+        </section>
+
+        <section class="solution-row" id="estabelecimentos">
+          <div class="solution-row__copy">
+            <h2>Soluções para estabelecimentos</h2>
+            <p>Acesse a área dos estabelecimentos credenciados.</p>
+            <a class="home-button" href="https://bpf.sistemaexpert.com.br/administrativo/" target="_blank" rel="noopener noreferrer">Área dos estabelecimentos <span aria-hidden="true">↗</span></a>
+          </div>
+          <img src="/home/establishments.webp" alt="Pessoa usando uma máquina de cartões" width="634" height="444" loading="lazy" decoding="async" />
+        </section>
       </div>
+
+      <section class="home-card-feature" aria-labelledby="card-feature-title">
+        <div class="home-card-feature__media">
+          <img src="/home/card.webp" alt="Mão segurando um cartão BPF Cartões" width="960" height="699" loading="lazy" decoding="async" />
+        </div>
+        <div class="home-card-feature__copy">
+          <h2 id="card-feature-title">BPF Cartões para empresas</h2>
+          <p>BPF Instituição de Pagamentos Ltda.</p>
+          <a class="home-button home-button--light" href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Portal das empresas <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="home-contact" id="contato" aria-labelledby="contact-title">
+        <div class="container home-contact__grid">
+          <div>
+            <h2 id="contact-title">Entre em contato com a BPF Cartões</h2>
+            <p>BPF Instituição de Pagamentos Ltda.</p>
+          </div>
+          <div class="home-contact__details">
+            <p><strong>Telefone</strong><a href="tel:08007770606">0800 777 0606</a></p>
+            <p><strong>WhatsApp</strong>0800 777 0606</p>
+            <p><strong>E-mail</strong><a href="mailto:faleconosco@bpfcartoes.com.br">faleconosco@bpfcartoes.com.br</a></p>
+            <address>Av. Pedro Botesi, 2171<br />Jardim Scomparim<br />Mogi Mirim/SP<br />CEP 13.806-635</address>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">

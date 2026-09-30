@@ -113,12 +113,6 @@ a:focus-visible {
   color: var(--red);
 }
 
-.site-main {
-  min-height: 18rem;
-  padding-block: clamp(3rem, 8vw, 6rem);
-  background: var(--surface);
-}
-
 h1,
 h2 {
   font-family: var(--font-heading);
@@ -128,11 +122,6 @@ h2 {
 h1 {
   margin: 0 0 var(--space-2);
   font-size: clamp(2.25rem, 5vw, 3.5rem);
-}
-
-.site-main p {
-  margin: 0;
-  font-size: 1.125rem;
 }
 
 .inner-page-banner {

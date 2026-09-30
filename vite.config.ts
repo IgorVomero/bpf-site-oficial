@@ -5,5 +5,6 @@ export default defineConfig({
   input: {
     home: 'index.html',
     privacy: 'bpf-politicas-privacidade/index.html',
+    about: 'quem-somos/index.html',
   },
 })

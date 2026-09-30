@@ -15,16 +15,30 @@
     <header class="site-header site-header--home">
       <div class="container site-header__inner">
         <a class="site-brand" href="/" aria-label="BPF Cartões — início">
-          <img src="/home/logo-white.webp" alt="BPF Cartões" width="110" height="68" />
+          <img src="/bpf-logo-white.webp" alt="" width="120" height="77" />
         </a>
 
         <nav class="site-nav" aria-label="Navegação principal">
+          <a href="/" aria-current="page">Início</a>
+          <a href="/quem-somos/">Quem Somos</a>
           <a href="#empresas">Empresas</a>
           <a href="#usuarios">Usuários</a>
           <a href="#estabelecimentos">Estabelecimentos</a>
         </nav>
 
-        <a class="header-contact" href="#contato">Fale conosco</a>
+        <a class="header-contact" href="#contato">Fale conosco <span aria-hidden="true">↗</span></a>
+
+        <details class="mobile-nav">
+          <summary>Menu <span class="mobile-nav__icon" aria-hidden="true"></span></summary>
+          <nav aria-label="Navegação principal">
+            <a href="/" aria-current="page">Início</a>
+            <a href="/quem-somos/">Quem Somos</a>
+            <a href="#empresas">Empresas</a>
+            <a href="#usuarios">Usuários</a>
+            <a href="#estabelecimentos">Estabelecimentos</a>
+            <a class="mobile-nav__contact" href="#contato">Fale conosco <span aria-hidden="true">↗</span></a>
+          </nav>
+        </details>
       </div>
     </header>
 
@@ -121,38 +135,52 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container site-footer__grid">
-        <div>
-          <p class="site-footer__title">BPF Instituição de Pagamentos Ltda.</p>
-          <p>CNPJ 02.030.078/0001-84</p>
-          <address>
-            Av. Pedro Botesi, 2171<br />
-            Jardim Scomparim<br />
-            Mogi Mirim/SP<br />
-            CEP 13.806-635
-          </address>
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a href="/" aria-label="BPF Cartões — início">
+              <img src="/bpf-logo-white.webp" alt="" width="120" height="75" loading="lazy" decoding="async" />
+            </a>
+            <p class="site-footer__company">BPF Instituição de Pagamentos Ltda.</p>
+            <p>CNPJ 02.030.078/0001-84</p>
+            <address>Av. Pedro Botesi, 2171<br />Jardim Scomparim<br />Mogi Mirim/SP<br />CEP 13.806-635</address>
+          </div>
+
+          <div>
+            <h2>Contato</h2>
+            <ul>
+              <li><a href="tel:08007770606">0800 777 0606</a></li>
+              <li>WhatsApp: 0800 777 0606</li>
+              <li><a href="mailto:faleconosco@bpfcartoes.com.br">faleconosco@bpfcartoes.com.br</a></li>
+              <li><a href="mailto:privacidade@bpfcartoes.com.br">privacidade@bpfcartoes.com.br</a></li>
+            </ul>
+          </div>
+
+          <nav aria-label="Acessos externos">
+            <h2>Acessos</h2>
+            <ul>
+              <li><a href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Portal das empresas <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://bpf.sistemaexpert.com.br/administrativo/" target="_blank" rel="noopener noreferrer">Área dos estabelecimentos credenciados <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Aplicativo BPF Cartões">
+            <h2>Aplicativo</h2>
+            <ul>
+              <li><a href="https://play.google.com/store/apps/details?hl=pt&amp;id=br.com.bpfcartoes.app" target="_blank" rel="noopener noreferrer">Google Play <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://apps.apple.com/br/app/bpf-cart%C3%B5es/id1579950979" target="_blank" rel="noopener noreferrer">App Store <span aria-hidden="true">↗</span></a></li>
+            </ul>
+          </nav>
         </div>
 
-        <div>
-          <h2>Contato</h2>
-          <ul>
-            <li>Telefone: <a href="tel:08007770606">0800 777 0606</a></li>
-            <li>WhatsApp: 0800 777 0606</li>
-            <li><a href="mailto:faleconosco@bpfcartoes.com.br">faleconosco@bpfcartoes.com.br</a></li>
-            <li><a href="mailto:privacidade@bpfcartoes.com.br">privacidade@bpfcartoes.com.br</a></li>
-            <li><a href="/bpf-politicas-privacidade/">Política de Privacidade</a></li>
-          </ul>
+        <div class="site-footer__bottom">
+          <p>BPF Instituição de Pagamentos Ltda. · CNPJ 02.030.078/0001-84</p>
+          <nav aria-label="Informações legais">
+            <a href="/bpf-politicas-privacidade/">Política de Privacidade</a>
+            <a href="/site/adesao.pdf">Termo de Adesão</a>
+            <a href="/site/etica-e-integridade.pdf">Ética e Integridade</a>
+          </nav>
         </div>
-
-        <nav aria-label="Acessos externos">
-          <h2>Acessos externos</h2>
-          <ul>
-            <li><a href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Portal das empresas</a></li>
-            <li><a href="https://bpf.sistemaexpert.com.br/administrativo/" target="_blank" rel="noopener noreferrer">Área dos estabelecimentos credenciados</a></li>
-            <li><a href="https://play.google.com/store/apps/details?hl=pt&amp;id=br.com.bpfcartoes.app" target="_blank" rel="noopener noreferrer">BPF Cartões no Google Play</a></li>
-            <li><a href="https://apps.apple.com/br/app/bpf-cart%C3%B5es/id1579950979" target="_blank" rel="noopener noreferrer">BPF Cartões na App Store</a></li>
-          </ul>
-        </nav>
       </div>
     </footer>
   </body>

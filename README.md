@@ -25,12 +25,15 @@ npm run typecheck
 - Static build output; no server runtime, database, CMS, or runtime secrets.
 - Add dependencies and project structure only when a confirmed requirement needs them.
 - Each public route needs its own HTML entry; direct navigation does not use an SPA fallback.
-- Use semantic HTML and browser capabilities for static content. React remains installed but is not loaded by either current page.
+- Use semantic HTML and browser capabilities for static content. React remains installed but is not loaded by any current page.
 - Share only confirmed styles and assets. Exact local Kumbh Sans and Mulish font files are pending.
 - Add other page content only after it is approved.
 
 The Home uses only optimized individual images from the approved Figma ZIP.
 The original export and full-page render remain outside the deployed assets.
+The Quem Somos page has its own HTML entry and reuses the shared styles and
+existing Home imagery where the approved design repeats those images.
+Its history and mission/vision/values copy remain omitted pending approved text.
 
 ## Privacy-policy URLs
 

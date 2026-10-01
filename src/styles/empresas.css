@@ -1,0 +1,265 @@
+.empresas-banner {
+  display: grid;
+  min-height: clamp(15rem, 22vw, 22rem);
+  align-items: center;
+  text-align: center;
+}
+
+.empresas-banner p {
+  margin: 1rem 0 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+}
+
+.empresas-intro {
+  padding-block: clamp(4.5rem, 8vw, 8rem) clamp(3rem, 5vw, 5rem);
+}
+
+.empresas-intro__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: end;
+  gap: clamp(3rem, 7vw, 7rem);
+}
+
+.empresas-intro h2,
+.empresas-overview h2,
+.empresas-contact h2 {
+  max-width: 19ch;
+  margin: 0 0 1.5rem;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+}
+
+.empresas-intro p,
+.empresas-overview p {
+  max-width: 44ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.empresas-products {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0 0 0.3rem;
+  padding: 0;
+  list-style: none;
+  font-weight: 700;
+}
+
+.empresas-products li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.empresas-products li::before {
+  display: grid;
+  flex: 0 0 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--red);
+  background: var(--surface);
+  content: '›';
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.empresas-overview {
+  padding-block: clamp(1rem, 3vw, 3rem) clamp(3rem, 5vw, 5rem);
+}
+
+.empresas-overview__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.62fr 1.25fr;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 3rem);
+}
+
+.empresas-overview h2 {
+  margin: 0;
+}
+
+.empresas-overview img {
+  width: min(100%, 17rem);
+  aspect-ratio: 720 / 879;
+  object-fit: contain;
+}
+
+.empresas-cards {
+  padding-block: 0 clamp(5rem, 8vw, 9rem);
+}
+
+.empresas-cards h2 {
+  margin: 0 0 2rem;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.empresas-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+}
+
+.empresas-card {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 0.35rem;
+  background: var(--surface);
+}
+
+.empresas-card img {
+  width: 100%;
+  aspect-ratio: 920 / 645;
+  object-fit: cover;
+}
+
+.empresas-card__content {
+  display: flex;
+  min-height: 8.5rem;
+  align-items: center;
+  border-top: 0.25rem solid var(--red);
+  padding: 1.5rem 2rem;
+}
+
+.empresas-card h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+}
+
+.empresas-contact {
+  padding-block: clamp(5rem, 8vw, 8rem);
+  color: var(--white);
+  background: linear-gradient(120deg, #211c1d, #3c2629 52%, #171719);
+  text-align: center;
+}
+
+.empresas-contact__inner {
+  display: grid;
+  justify-items: center;
+}
+
+.empresas-contact h2 {
+  max-width: 25ch;
+  margin-bottom: 1rem;
+}
+
+.empresas-contact p {
+  max-width: 48ch;
+  margin: 0 0 1.75rem;
+  line-height: 1.7;
+}
+
+.empresas-button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.7rem;
+  color: var(--white);
+  background: var(--red);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.empresas-button:hover {
+  background: var(--red-dark);
+}
+
+.empresas-contact .empresas-button:focus-visible {
+  outline-color: var(--white);
+}
+
+.empresas-login {
+  padding-block: clamp(3.5rem, 6vw, 6rem);
+}
+
+.empresas-login__panel {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr auto;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  border-left: 2px solid var(--red);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--surface);
+}
+
+.empresas-login h2 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.empresas-login p {
+  max-width: 35ch;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.empresas-login .empresas-button {
+  white-space: nowrap;
+}
+
+@media (max-width: 64rem) {
+  .empresas-overview__grid {
+    grid-template-columns: 1fr 0.65fr;
+  }
+
+  .empresas-overview p {
+    grid-column: 1 / -1;
+  }
+
+  .empresas-login__panel {
+    grid-template-columns: 1fr auto;
+  }
+
+  .empresas-login p {
+    grid-column: 1;
+  }
+
+  .empresas-login .empresas-button {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+}
+
+@media (max-width: 48rem) {
+  .empresas-intro__grid,
+  .empresas-overview__grid,
+  .empresas-cards__grid,
+  .empresas-login__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .empresas-intro__grid {
+    gap: 2rem;
+  }
+
+  .empresas-overview p,
+  .empresas-login p,
+  .empresas-login .empresas-button {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .empresas-overview img {
+    width: min(65%, 17rem);
+    justify-self: center;
+  }
+
+  .empresas-cards__grid {
+    gap: 1.5rem;
+  }
+
+  .empresas-card__content {
+    min-height: 6rem;
+  }
+
+  .empresas-login .empresas-button {
+    justify-self: start;
+  }
+}

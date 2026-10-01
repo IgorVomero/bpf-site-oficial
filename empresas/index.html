@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quem Somos | BPF Cartões</title>
-    <meta name="description" content="Conheça a BPF Cartões e acesse os canais oficiais para empresas, usuários e estabelecimentos." />
-    <link rel="canonical" href="https://bpfcartoes.com.br/quem-somos/" />
+    <title>Empresas | BPF Cartões</title>
+    <meta name="description" content="Conheça Vale Refeição, Vale Alimentação e Prime Flex da BPF Cartões e acesse o portal das empresas." />
+    <link rel="canonical" href="https://bpfcartoes.com.br/empresas/" />
     <link rel="stylesheet" href="/src/styles/global.css" />
-    <link rel="stylesheet" href="/src/styles/about.css" />
+    <link rel="stylesheet" href="/src/styles/empresas.css" />
     <script type="module" src="/src/navbar.ts"></script>
   </head>
   <body>
@@ -22,8 +22,8 @@
 
           <nav class="site-nav" aria-label="Navegação principal">
             <a href="/">Início</a>
-            <a href="/quem-somos/" aria-current="page">Quem Somos</a>
-            <a href="/empresas/">Empresas</a>
+            <a href="/quem-somos/">Quem Somos</a>
+            <a href="/empresas/" aria-current="page">Empresas</a>
             <a href="/#usuarios">Usuários</a>
             <a href="/#estabelecimentos">Estabelecimentos</a>
           </nav>
@@ -34,8 +34,8 @@
             <summary>Menu <span class="mobile-nav__icon" aria-hidden="true"></span></summary>
             <nav aria-label="Navegação principal">
               <a href="/">Início</a>
-              <a href="/quem-somos/" aria-current="page">Quem Somos</a>
-              <a href="/empresas/">Empresas</a>
+              <a href="/quem-somos/">Quem Somos</a>
+              <a href="/empresas/" aria-current="page">Empresas</a>
               <a href="/#usuarios">Usuários</a>
               <a href="/#estabelecimentos">Estabelecimentos</a>
               <a class="mobile-nav__contact" href="/#contato">Fale conosco <span aria-hidden="true">↗</span></a>
@@ -46,69 +46,72 @@
     </header>
 
     <main id="conteudo">
-      <div class="inner-page-banner inner-page-banner--about">
+      <div class="inner-page-banner empresas-banner">
         <div class="container">
-          <h1>Quem Somos</h1>
+          <h1>Soluções para Empresas</h1>
+          <p>Vale Refeição · Vale Alimentação · Prime Flex</p>
         </div>
       </div>
 
-      <section class="about-intro" aria-labelledby="about-intro-title">
-        <div class="container about-intro__grid">
-          <div class="about-intro__media">
-            <img src="/team-discussion.webp" alt="Mulher de blazer vermelho em ambiente claro" width="634" height="596" decoding="async" />
+      <section class="empresas-intro" aria-labelledby="empresas-intro-title">
+        <div class="container empresas-intro__grid">
+          <div>
+            <h2 id="empresas-intro-title">Benefícios BPF para sua empresa</h2>
+            <p>Conheça as soluções de benefícios da BPF Cartões para empresas.</p>
           </div>
-          <div class="about-intro__copy">
-            <p class="about-eyebrow">BPF Cartões</p>
-            <h2 id="about-intro-title">Conheça a BPF</h2>
-            <p class="about-intro__company">BPF Instituição de Pagamentos Ltda.</p>
-            <p>CNPJ 02.030.078/0001-84</p>
-            <p>Conheça os canais oficiais para empresas, usuários e estabelecimentos.</p>
-          </div>
+          <ul class="empresas-products" aria-label="Soluções da BPF Cartões">
+            <li>Vale Refeição</li>
+            <li>Vale Alimentação</li>
+            <li>Prime Flex</li>
+          </ul>
         </div>
       </section>
 
-      <section class="about-solutions" aria-labelledby="about-solutions-title">
+      <section class="empresas-overview" aria-labelledby="empresas-overview-title">
+        <div class="container empresas-overview__grid">
+          <h2 id="empresas-overview-title">BPF Cartões para empresas</h2>
+          <img src="/empresas/cartoes-bpf.webp" alt="Imagem ilustrativa de cartões BPF" width="720" height="879" loading="lazy" decoding="async" />
+          <p>O portal das empresas da BPF Cartões reúne o acesso para clientes.</p>
+        </div>
+      </section>
+
+      <section class="empresas-cards" aria-labelledby="empresas-cards-title">
         <div class="container">
-          <h2 id="about-solutions-title">Conheça nossas soluções</h2>
-          <div class="about-solutions__grid">
-            <article class="about-solution">
-              <img src="/home/companies.webp" alt="Pessoa analisando documentos e gráficos" width="634" height="444" loading="lazy" decoding="async" />
-              <div class="about-solution__copy">
-                <h3>Para Empresas</h3>
-                <p>Portal das empresas da BPF Cartões.</p>
-                <a href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Acessar portal <span aria-hidden="true">↗</span></a>
-              </div>
+          <h2 id="empresas-cards-title">Soluções de benefícios</h2>
+          <div class="empresas-cards__grid">
+            <article class="empresas-card">
+              <img src="/empresas/pessoa-com-celular.webp" alt="Pessoa usando o celular à mesa" width="920" height="645" loading="lazy" decoding="async" />
+              <div class="empresas-card__content"><h3>Vale Refeição</h3></div>
             </article>
-            <article class="about-solution">
-              <img src="/home/users.webp" alt="Pessoa consultando o celular em um estabelecimento" width="634" height="444" loading="lazy" decoding="async" />
-              <div class="about-solution__copy">
-                <h3>Para Usuários</h3>
-                <p>Aplicativo BPF Cartões nas lojas oficiais.</p>
-                <a href="/#usuarios">Ver opções de acesso <span aria-hidden="true">→</span></a>
-              </div>
+            <article class="empresas-card">
+              <img src="/empresas/pagamento-com-cartao.webp" alt="Pessoa aproximando um cartão de uma máquina de pagamento" width="920" height="644" loading="lazy" decoding="async" />
+              <div class="empresas-card__content"><h3>Vale Alimentação</h3></div>
             </article>
-            <article class="about-solution">
-              <img src="/home/establishments.webp" alt="Pessoa usando uma máquina de cartões" width="634" height="444" loading="lazy" decoding="async" />
-              <div class="about-solution__copy">
-                <h3>Para Estabelecimentos</h3>
-                <p>Área dos estabelecimentos credenciados.</p>
-                <a href="https://bpf.sistemaexpert.com.br/administrativo/" target="_blank" rel="noopener noreferrer">Acessar área <span aria-hidden="true">↗</span></a>
-              </div>
+            <article class="empresas-card">
+              <img src="/empresas/pessoa-no-computador.webp" alt="Pessoa trabalhando em um computador" width="920" height="644" loading="lazy" decoding="async" />
+              <div class="empresas-card__content"><h3>Prime Flex</h3></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="about-feature" aria-labelledby="about-feature-title">
-        <div class="about-feature__media">
-          <img src="/home/card.webp" alt="Mão segurando um cartão BPF Cartões" width="960" height="699" loading="lazy" decoding="async" />
-        </div>
-        <div class="about-feature__copy">
-          <h2 id="about-feature-title">BPF Cartões para empresas</h2>
-          <p>Acesse o canal oficial das empresas.</p>
-          <a href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Portal das empresas <span aria-hidden="true">↗</span></a>
+      <section class="empresas-contact" aria-labelledby="empresas-contact-title">
+        <div class="container empresas-contact__inner">
+          <h2 id="empresas-contact-title">Converse com a BPF sobre benefícios para sua empresa</h2>
+          <p>Saiba mais sobre Vale Refeição, Vale Alimentação e Prime Flex.</p>
+          <a class="empresas-button" href="mailto:faleconosco@bpfcartoes.com.br">Fale conosco <span aria-hidden="true">→</span></a>
         </div>
       </section>
+
+      <aside class="empresas-login" aria-label="Acesso para clientes">
+        <div class="container">
+          <div class="empresas-login__panel">
+            <h2>Já é nosso cliente?</h2>
+            <p>Acesse o portal das empresas da BPF Cartões.</p>
+            <a class="empresas-button" href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Fazer login <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </aside>
     </main>
 
     <footer class="site-footer">

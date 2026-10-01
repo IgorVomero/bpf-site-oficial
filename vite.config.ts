@@ -6,5 +6,6 @@ export default defineConfig({
     home: 'index.html',
     privacy: 'bpf-politicas-privacidade/index.html',
     about: 'quem-somos/index.html',
+    companies: 'empresas/index.html',
   },
 })

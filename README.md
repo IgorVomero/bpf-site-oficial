@@ -29,11 +29,34 @@ npm run typecheck
 - Share only confirmed styles and assets. Exact local Kumbh Sans and Mulish font files are pending.
 - Add other page content only after it is approved.
 
-The Home uses only optimized individual images from the approved Figma ZIP.
+The Home uses only optimized images from the approved local ZIP.
 The original export and full-page render remain outside the deployed assets.
 The Quem Somos page has its own HTML entry and reuses the shared styles and
 existing Home imagery where the approved design repeats those images.
-Its history and mission/vision/values copy remain omitted pending approved text.
+Pass 9 restores the approved NEW-render copy, including its history and
+mission/vision/values, subject to the client's final editorial corrections.
+Pass 9.5 restores Home's approved metrics (300k+ cards, 300 establishments and
+600 companies), the institutional icons and overlapping solution cards.
+Other numerical claims remain excluded. Home's six FAQ entries use native
+`details`/`summary` elements and the exact client-approved wording.
+
+The provider assets at `public/estabelecimentos/providers/` come from the
+Estabelecimentos NEW render in the approved local `BPF Site (Copy).zip`.
+The original white logo artwork was isolated from that render's red background;
+Rede Pop is excluded. Clover comes from the existing local file
+`/Users/igorvomero/Downloads/Clover_mobile_app_Logo.svg.png`, optimized to WebP
+with its proportions preserved. CSS displays it in white to match the strip.
+Pass 9.5 keeps this approved Clover asset and displays all seven accepted
+providers in a seamless 30-second CSS marquee. Its duplicate list is hidden
+from assistive technology; reduced motion shows the complete static list.
+The two new Home benefit icons come from the ZIP's `Group 1.png` and `Group 2.png`.
+The Mission and Vision artwork comes from those same assets; Values and the
+three Users benefit icons are isolated from their complete approved NEW renders.
+
+The clean source photographs for the Companies CTA, Home hero and establishment
+portal are absent from the ZIP. The establishment CTA export also contains
+baked-in copy. Existing backgrounds remain unchanged where the full photograph
+cannot be recovered without generating replacement content.
 
 ## Privacy-policy URLs
 

@@ -1,65 +1,63 @@
 .usuarios-banner {
   display: grid;
-  min-height: clamp(15rem, 22vw, 22rem);
+  min-height: 0;
   align-items: center;
   text-align: center;
 }
 
 .usuarios-banner p {
   margin: 1rem 0 0;
-  font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+  font-size: 1rem;
+  color: var(--text-secondary);
 }
 
 .usuarios-benefits {
-  padding-block: clamp(4rem, 6vw, 6rem) clamp(3rem, 5vw, 5rem);
+  padding-block: var(--section-space);
 }
 
 .usuarios-benefits__intro {
-  max-width: 62rem;
-  margin: 0 auto clamp(2.5rem, 4vw, 4rem);
-  text-align: center;
+  max-width: none;
+  margin: 0 0 var(--section-gap);
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--section-gap);
+  align-items: start;
 }
 
 .usuarios-benefits h2,
 .usuarios-app h2 {
-  margin: 0 0 1.5rem;
-  font-size: clamp(1.9rem, 3vw, 2.75rem);
+  margin: 0 0 1.25rem;
+  font-size: var(--heading-section);
 }
 
 .usuarios-benefits__intro p {
   margin: 0;
-  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  font-size: 1rem;
   line-height: 1.7;
+  max-width: 65ch;
+  color: var(--text-secondary);
 }
 
 .usuarios-benefits__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.5rem, 4vw, 4rem);
+  gap: 1.25rem;
 }
 
 .usuarios-benefit {
   position: relative;
   min-width: 0;
-  min-height: 23rem;
-  border-radius: var(--radius-small);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
-  background: #f3f3f3;
-}
-
-.usuarios-benefit::after {
-  position: absolute;
-  inset: auto 1.25rem -3px;
-  height: 3px;
-  border-radius: 0 0 3px 3px;
-  background: var(--red);
-  content: '';
+  border-radius: var(--radius-card);
+  padding: var(--card-padding);
+  background: var(--surface-soft);
+  border: 1px solid var(--border-subtle);
 }
 
 .usuarios-benefit img {
-  width: 6rem;
+  width: 4rem;
   aspect-ratio: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .usuarios-benefit h3 {
@@ -70,87 +68,103 @@
 }
 
 .usuarios-benefit p {
-  max-width: 25ch;
+  max-width: none;
   margin: 0;
   line-height: 1.7;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
 }
 
 .usuarios-app {
-  padding-block: 1rem clamp(4rem, 6vw, 6rem);
+  padding-block: 0 var(--section-space);
 }
 
 .usuarios-app__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
   align-items: center;
-  gap: clamp(3rem, 8vw, 8rem);
-  padding-inline: clamp(0rem, 3vw, 3rem);
+  gap: clamp(2rem, 4vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 4rem);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-large);
+  background: var(--surface-soft);
 }
 
 .usuarios-app__copy {
-  max-width: 28rem;
+  max-width: none;
 }
 
 .usuarios-app h2 {
-  max-width: 18ch;
+  max-width: 24ch;
 }
 
 .usuarios-app p {
   margin: 0;
-  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  font-size: 1rem;
   line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 60ch;
 }
 
 .usuarios-app__image {
-  width: clamp(14rem, 20vw, 19rem);
+  width: min(100%, 13rem);
   aspect-ratio: 341 / 731;
   justify-self: center;
   object-fit: contain;
 }
 
 .usuarios-download {
-  padding-bottom: clamp(4rem, 6vw, 6rem);
+  margin-top: 1.75rem;
 }
 
 .usuarios-download__panel {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: flex-end;
-  gap: clamp(2rem, 5vw, 5rem);
-  margin-inline: clamp(0rem, 2vw, 2rem);
-  border-left: 2px solid var(--red);
-  border-radius: 0 0.75rem 0.75rem 0;
-  padding: clamp(1.5rem, 3vw, 3rem) clamp(1.5rem, 5vw, 5rem);
-  background: #f3f3f3;
+  gap: 1rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--border-subtle);
 }
 
 .usuarios-download h2 {
   margin: 0;
-  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+  font-size: 1rem;
+  max-width: none;
 }
 
 .usuarios-download__stores {
-  display: grid;
-  flex-shrink: 0;
-  gap: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .usuarios-download__stores a {
-  display: inline-flex;
+  display: grid;
   min-height: 3.125rem;
-  border: 1px solid #555;
+  justify-items: center;
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-small);
-  background: #000;
+  background: var(--white);
+  overflow: hidden;
+  padding: 0.5rem;
+  text-decoration: none;
 }
 
 .usuarios-download__stores a:hover {
   border-color: var(--red);
 }
 
+.usuarios-download__stores span {
+  padding: 0.5rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 .usuarios-download__stores img {
-  width: 10.125rem;
+  width: 9rem;
   aspect-ratio: 162 / 50;
   object-fit: contain;
+  border-radius: 0.3rem;
 }
 
 @media (max-width: 64rem) {
@@ -159,11 +173,12 @@
   }
 
   .usuarios-benefit {
-    min-height: 21rem;
+    min-height: 0;
   }
 }
 
 @media (max-width: 48rem) {
+  .usuarios-benefits__intro,
   .usuarios-benefits__grid,
   .usuarios-app__grid {
     grid-template-columns: 1fr;
@@ -184,7 +199,7 @@
 
   .usuarios-app__grid {
     gap: 2.5rem;
-    padding-inline: 0;
+    padding-inline: var(--card-padding);
   }
 
   .usuarios-app__copy {
@@ -192,7 +207,7 @@
   }
 
   .usuarios-app__image {
-    width: min(65%, 17rem);
+    width: min(65%, 13rem);
   }
 
   .usuarios-download__panel {
@@ -201,4 +216,9 @@
     gap: 1.5rem;
     margin-inline: 0;
   }
+}
+
+.usuarios-benefits__intro h2 {
+  max-width: 24ch;
+  margin: 0;
 }

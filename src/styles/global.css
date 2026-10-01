@@ -13,6 +13,19 @@
   --space-3: 1.5rem;
   --space-4: 3rem;
   --radius-small: 0.5rem;
+  --radius-card: 1.375rem;
+  --radius-large: 1.75rem;
+  --radius-pill: 999px;
+  --surface-soft: #f7f7f5;
+  --surface-neutral: #f1f2f0;
+  --text-secondary: #5e6265;
+  --border-subtle: #e4e5e1;
+  --shadow-soft: 0 12px 36px rgb(0 0 0 / 6%);
+  --section-space: clamp(3rem, 5.5vw, 5rem);
+  --section-gap: clamp(1.5rem, 3vw, 2.5rem);
+  --card-padding: clamp(1.5rem, 2.2vw, 2rem);
+  --heading-section: clamp(1.75rem, 2.65vw, 2.375rem);
+  --button-padding: 0.8rem 1.5rem;
   --font-heading: 'Kumbh Sans', system-ui, sans-serif;
   --font-body: 'Mulish', system-ui, sans-serif;
 }
@@ -347,27 +360,69 @@ h1 {
   font-size: clamp(2.25rem, 5vw, 3.5rem);
 }
 
+/* Static visual system: intentionally scoped away from the navbar. */
+main :is(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+main h2 {
+  letter-spacing: -0.025em;
+}
+
+main :is(p, li) {
+  text-wrap: pretty;
+}
+
+main :is(section, aside)[id] {
+  scroll-margin-top: 6rem;
+}
+
+.action-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--red-dark);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.action-link:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 4px;
+}
+
+.action-link > span[aria-hidden] {
+  font-size: 1.1em;
+}
+
+.inset-feature {
+  width: min(calc(100% - 2rem), var(--content-width));
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--radius-large);
+}
+
 .inner-page-banner {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(3.5rem, 7vw, 5.5rem);
-  color: var(--white);
-  background: var(--red);
-}
-
-.inner-page-banner::after {
-  position: absolute;
-  inset: auto -12% -200% auto;
-  width: 65vw;
-  aspect-ratio: 1;
-  border: 1px solid rgb(255 255 255 / 10%);
-  border-radius: 50%;
-  content: '';
-  pointer-events: none;
+  padding-block: clamp(2.5rem, 4.5vw, 4rem);
+  color: var(--dark);
+  background: var(--surface-soft);
+  width: min(calc(100% - 2rem), var(--content-width));
+  margin-inline: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-large);
 }
 
 .inner-page-banner h1 {
   margin: 0;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  max-width: 28ch;
+  margin-inline: auto;
+  letter-spacing: -0.035em;
 }
 
 .privacy-policy {
@@ -397,20 +452,21 @@ h1 {
 }
 
 .site-footer {
-  padding-block: clamp(3.5rem, 6vw, 5.5rem) 0;
-  color: rgb(255 255 255 / 70%);
-  background: #1d1d1f;
+  border-top: 1px solid var(--border-subtle);
+  padding-block: clamp(3rem, 5vw, 4.5rem) 0;
+  color: #60656b;
+  background: #f7f7f5;
 }
 
 .site-footer__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
-  gap: clamp(2rem, 4vw, 4rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.25fr) minmax(0, 1.35fr) 10rem;
+  gap: clamp(1.5rem, 2.2vw, 2rem);
 }
 
 .site-footer h2 {
   margin: 0 0 1.25rem;
-  color: var(--white);
+  color: var(--dark);
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -427,7 +483,7 @@ h1 {
 }
 
 .site-footer__company {
-  color: var(--white);
+  color: var(--dark);
   font-weight: 700;
 }
 
@@ -455,13 +511,13 @@ h1 {
 .site-footer__stores a {
   display: inline-flex;
   width: fit-content;
-  border: 1px solid rgb(255 255 255 / 22%);
+  border: 1px solid #555;
   border-radius: var(--radius-small);
   background: #000;
 }
 
 .site-footer__stores a:hover {
-  border-color: rgb(255 255 255 / 65%);
+  border-color: var(--red);
 }
 
 .site-footer__stores img {
@@ -470,17 +526,21 @@ h1 {
 }
 
 .site-footer a {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   text-decoration: none;
 }
 
+.site-footer a[href^='mailto:'] {
+  white-space: nowrap;
+}
+
 .site-footer a:hover {
-  color: var(--white);
+  color: var(--red-dark);
   text-decoration: underline;
 }
 
 .site-footer a:focus-visible {
-  outline-color: var(--white);
+  outline-color: var(--red);
 }
 
 .site-footer__bottom {
@@ -488,8 +548,8 @@ h1 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem 2rem;
-  margin-top: clamp(3rem, 5vw, 5rem);
-  border-top: 1px solid rgb(255 255 255 / 14%);
+  margin-top: clamp(2.5rem, 4vw, 3.5rem);
+  border-top: 1px solid var(--border-subtle);
   padding-block: 1.4rem;
   font-size: 0.8rem;
 }
@@ -633,6 +693,13 @@ h1 {
 
   .site-footer__bottom {
     display: grid;
+  }
+}
+
+@media (max-width: 22rem) {
+  .site-footer a[href^='mailto:'] {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 }
 

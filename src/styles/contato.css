@@ -1,0 +1,221 @@
+.contato-banner {
+  display: grid;
+  min-height: clamp(15rem, 22vw, 22rem);
+  align-items: center;
+  text-align: center;
+}
+
+.contato-banner p {
+  margin: 1rem 0 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+}
+
+.contato-container {
+  max-width: 66rem;
+}
+
+.contato-audiences {
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+
+.contato-audiences__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 3rem);
+}
+
+.contato-audience {
+  min-width: 0;
+  border-radius: var(--radius-small);
+  background: #f3f3f3;
+  text-decoration: none;
+}
+
+.contato-audience__media {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
+  color: var(--white);
+}
+
+.contato-audience__media::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(transparent 15%, rgb(22 22 24 / 88%));
+  content: '';
+}
+
+.contato-audience img {
+  position: relative;
+  z-index: -2;
+  width: 100%;
+  aspect-ratio: 1.62;
+  object-fit: cover;
+}
+
+.contato-audience h2 {
+  position: absolute;
+  inset: auto 1.5rem 1.25rem;
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+}
+
+.contato-audience p {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.contato-audience:hover h2 {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contato-contact {
+  padding-bottom: clamp(3.5rem, 7vw, 7rem);
+}
+
+.contato-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.contato-contact__copy h2 {
+  max-width: 18ch;
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.9rem, 3vw, 2.75rem);
+}
+
+.contato-contact__copy > p {
+  max-width: 40ch;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.contato-contacts {
+  display: grid;
+  gap: 1.25rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contato-contacts strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.contato-contacts a,
+.contato-contact__panel > a:not(.contato-button) {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  max-width: 100%;
+  color: var(--red-dark);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.contato-contact__panel {
+  min-width: 0;
+  border-radius: 0 0 0 1.5rem;
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  background: #f3f3f3;
+}
+
+.contato-contact__panel h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+}
+
+.contato-contact__panel address {
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid #dddfe5;
+  padding-bottom: 1.75rem;
+  font-style: normal;
+  line-height: 1.8;
+}
+
+.contato-button {
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 1.75rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.75rem;
+  color: var(--white);
+  background: var(--red);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contato-button:hover {
+  background: var(--red-dark);
+}
+
+.contato-institution {
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+  color: var(--white);
+  background: var(--red);
+  text-align: center;
+}
+
+.contato-institution h2 {
+  max-width: 28ch;
+  margin: 0 auto 1rem;
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+}
+
+.contato-institution p {
+  margin: 0;
+}
+
+@media (max-width: 48rem) {
+  .contato-contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-contact__copy h2 {
+    max-width: 24ch;
+  }
+
+  .contato-audience h2 {
+    inset-inline: 1rem;
+    bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .contato-audience p {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .contato-audiences__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contato-audience h2 {
+    inset-inline: 1.5rem;
+    bottom: 1.25rem;
+    font-size: 1.25rem;
+  }
+
+  .contato-audience p {
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

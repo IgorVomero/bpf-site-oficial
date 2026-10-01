@@ -9,5 +9,6 @@ export default defineConfig({
     companies: 'empresas/index.html',
     users: 'usuarios/index.html',
     establishments: 'estabelecimentos/index.html',
+    contact: 'contato/index.html',
   },
 })

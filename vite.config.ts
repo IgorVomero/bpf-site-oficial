@@ -8,5 +8,6 @@ export default defineConfig({
     about: 'quem-somos/index.html',
     companies: 'empresas/index.html',
     users: 'usuarios/index.html',
+    establishments: 'estabelecimentos/index.html',
   },
 })

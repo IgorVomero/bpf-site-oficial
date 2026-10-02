@@ -1,44 +1,41 @@
 .contato-banner {
   display: grid;
-  min-height: 0;
+  min-height: clamp(15rem, 22vw, 22rem);
   align-items: center;
   text-align: center;
 }
 
 .contato-banner p {
   margin: 1rem 0 0;
-  font-size: 1rem;
-  color: var(--text-secondary);
+  font-size: clamp(0.95rem, 1.6vw, 1.25rem);
 }
 
 .contato-container {
-  max-width: var(--content-width);
+  max-width: 66rem;
 }
 
 .contato-audiences {
-  padding-block: var(--section-space);
+  padding-block: clamp(3rem, 6vw, 6rem);
 }
 
 .contato-audiences__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: clamp(1rem, 3vw, 3rem);
 }
 
 .contato-audience {
   min-width: 0;
-  border-radius: var(--radius-card);
-  background: var(--surface-soft);
+  border-radius: var(--radius-small);
+  background: #f3f3f3;
   text-decoration: none;
-  border: 1px solid var(--border-subtle);
-  overflow: hidden;
 }
 
 .contato-audience__media {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: var(--radius-small) var(--radius-small) 0 0;
   color: var(--white);
 }
 
@@ -78,7 +75,7 @@
 }
 
 .contato-contact {
-  padding-bottom: var(--section-space);
+  padding-bottom: clamp(3.5rem, 7vw, 7rem);
 }
 
 .contato-contact__grid {
@@ -89,16 +86,15 @@
 }
 
 .contato-contact__copy h2 {
-  max-width: 24ch;
+  max-width: 18ch;
   margin: 0 0 1.5rem;
-  font-size: var(--heading-section);
+  font-size: clamp(1.9rem, 3vw, 2.75rem);
 }
 
 .contato-contact__copy > p {
-  max-width: 58ch;
+  max-width: 40ch;
   margin: 0;
   line-height: 1.8;
-  color: var(--text-secondary);
 }
 
 .contato-contacts {
@@ -127,10 +123,9 @@
 
 .contato-contact__panel {
   min-width: 0;
-  border-radius: var(--radius-card);
+  border-radius: 0 0 0 1.5rem;
   padding: clamp(1.5rem, 3.5vw, 3rem);
-  background: var(--surface-soft);
-  border: 1px solid var(--border-subtle);
+  background: #f3f3f3;
 }
 
 .contato-contact__panel h3 {
@@ -141,7 +136,7 @@
 
 .contato-contact__panel address {
   margin-bottom: 1.75rem;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid #dddfe5;
   padding-bottom: 1.75rem;
   font-style: normal;
   line-height: 1.8;
@@ -156,16 +151,13 @@
   width: fit-content;
   max-width: 100%;
   margin-top: 1.75rem;
-  border-radius: var(--radius-pill);
-  padding: var(--button-padding);
+  border-radius: 999px;
+  padding: 0.75rem 1.75rem;
   color: var(--white);
   background: var(--red);
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  font-size: 0.9375rem;
-  line-height: 1.3;
-  border: 1px solid var(--red);
 }
 
 .contato-button:hover {
@@ -173,18 +165,16 @@
 }
 
 .contato-institution {
-  padding-block: var(--section-space);
-  color: var(--dark);
-  background: var(--surface-soft);
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+  color: var(--white);
+  background: var(--red);
   text-align: center;
-  margin-bottom: var(--section-space);
-  border: 1px solid var(--border-subtle);
 }
 
 .contato-institution h2 {
   max-width: 28ch;
   margin: 0 auto 1rem;
-  font-size: var(--heading-section);
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
 }
 
 .contato-institution p {

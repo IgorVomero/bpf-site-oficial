@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/about.css" />
     <script type="module" src="/src/navbar.ts"></script>
+    <script type="module" src="/src/reveal.ts"></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -55,17 +56,17 @@
 
       <section class="about-intro" aria-labelledby="about-intro-title">
         <div class="container about-intro__grid">
-          <div class="about-intro__media">
-            <img src="/team-discussion.webp" alt="Mulher de blazer vermelho em ambiente claro" width="634" height="596" decoding="async" />
+          <div class="about-intro__media" data-reveal>
+            <img src="/quem-somos/intro-woman.webp" alt="Mulher de blazer vermelho em ambiente claro" width="634" height="596" decoding="async" />
           </div>
-          <div class="about-intro__copy">
+          <div class="about-intro__copy" data-reveal>
             <p class="about-eyebrow">BPF Cartões</p>
             <h2 id="about-intro-title"><strong>Conheça a BPF Cartões:</strong> credibilidade e confiança em cartões de benefícios</h2>
             <p>Mais do que uma empresa de cartões, somos um parceiro estratégico focado em soluções que impulsionam o seu crescimento.</p>
             <ul class="about-principles">
-              <li><strong>Foco no Cliente:</strong> para garantir que não haja dores de cabeça com burocracia, do início ao fim do processo.</li>
-              <li><strong>Tecnologia de Ponta:</strong> Nossa plataforma é moderna e intuitiva, garantindo agilidade e segurança na gestão dos seus cartões de benefícios.</li>
-              <li><strong>Parcerias Estratégicas:</strong> Trabalhamos com parceiros como a bandeira Elo, garantindo uma ampla aceitação e maior flexibilidade para os usuários.</li>
+              <li><strong>Foco no Cliente:</strong> <span>para garantir que não haja dores de cabeça com burocracia, do início ao fim do processo.</span></li>
+              <li><strong>Tecnologia de Ponta:</strong> <span>Nossa plataforma é moderna e intuitiva, garantindo agilidade e segurança na gestão dos seus cartões de benefícios.</span></li>
+              <li><strong>Parcerias Estratégicas:</strong> <span>Trabalhamos com parceiros como a bandeira Elo, garantindo uma ampla aceitação e maior flexibilidade para os usuários.</span></li>
             </ul>
           </div>
         </div>
@@ -73,20 +74,23 @@
 
       <section class="about-history" aria-labelledby="about-history-title">
         <div class="container">
-          <h2 id="about-history-title">Nossa História</h2>
-          <p class="about-history__intro">A BPF Cartões foi fundada com a missão de inovar e simplificar a gestão de benefícios para empresas e prefeituras. Ao longo dos anos, evoluímos e nos especializamos em oferecer soluções completas em Vale Alimentação, Vale Refeição, Vale Transporte e muito mais, sempre com foco em tecnologia e segurança. Saímos de uma plataforma focada em banco digital e boleto para focar 100% no que realmente somos, uma empresa de cartões de benefícios. Nossa dedicação nos permitiu construir uma reputação sólida, baseada na confiança e na parceria de longo prazo com nossos clientes.</p>
+          <h2 id="about-history-title" data-reveal>Nossa História</h2>
+          <div class="about-history__intro" data-reveal>
+            <p>A BPF Cartões foi fundada com a missão de inovar e simplificar a gestão de benefícios para empresas e prefeituras. Ao longo dos anos, evoluímos e nos especializamos em oferecer soluções completas em Vale Alimentação, Vale Refeição, Vale Transporte e muito mais, sempre com foco em tecnologia e segurança.</p>
+            <p>Saímos de uma plataforma focada em banco digital e boleto para focar 100% no que realmente somos, uma empresa de cartões de benefícios. Nossa dedicação nos permitiu construir uma reputação sólida, baseada na confiança e na parceria de longo prazo com nossos clientes.</p>
+          </div>
           <div class="about-history__grid">
-            <article>
+            <article data-reveal>
               <div class="about-history__icon"><img src="/quem-somos/missao.webp" alt="" width="152" height="160" loading="lazy" decoding="async" /></div>
               <h3>Missão</h3>
               <p>Oferecer soluções financeiras inovadoras que simplifiquem a gestão de benefícios e despesas, proporcionando segurança, praticidade e transparência para empresas e órgãos públicos.</p>
             </article>
-            <article>
+            <article data-reveal>
               <div class="about-history__icon"><img src="/quem-somos/visao.webp" alt="" width="160" height="137" loading="lazy" decoding="async" /></div>
               <h3>Visão</h3>
               <p>Ser referência em cartões corporativos e benefícios, destacando-se pela excelência no atendimento, tecnologia de ponta e comprometimento com resultados.</p>
             </article>
-            <article>
+            <article data-reveal>
               <div class="about-history__icon"><img src="/quem-somos/valores.webp" alt="" width="78" height="69" loading="lazy" decoding="async" /></div>
               <h3>Valores</h3>
               <ul><li>Inovação</li><li>Segurança</li><li>Transparência</li><li>Comprometimento</li><li>Proximidade</li></ul>
@@ -97,41 +101,47 @@
 
       <section class="about-solutions" aria-labelledby="about-solutions-title">
         <div class="container">
-          <h2 id="about-solutions-title">Conheça nossas soluções</h2>
+          <h2 id="about-solutions-title" data-reveal>Conheça nossas soluções</h2>
           <div class="about-solutions__grid">
-            <article class="about-solution">
-              <img src="/home/companies.webp" alt="Pessoa analisando documentos e gráficos" width="634" height="444" loading="lazy" decoding="async" />
-              <div class="about-solution__copy">
-                <h3>Para Empresas</h3>
-                <p>Ofereça os melhores benefícios aos seus colaboradores. Ganhe em facilidade, segurança e agilidade.</p>
-                <a class="action-link" href="/empresas/">Conheça as soluções <span aria-hidden="true">↗</span></a>
-              </div>
+            <article class="about-solution" data-reveal>
+              <a class="about-solution__link" href="/empresas/" aria-labelledby="about-solution-empresas-title">
+                <span class="about-solution__media"><img src="/quem-somos/solution-companies.webp" alt="Pessoa analisando documentos e gráficos" width="634" height="444" loading="lazy" decoding="async" /></span>
+                <div class="about-solution__copy">
+                  <h3 id="about-solution-empresas-title">Para Empresas</h3>
+                  <p>Ofereça os melhores benefícios aos seus colaboradores. Ganhe em facilidade, segurança e agilidade.</p>
+                  <span class="about-solution__action">Conheça as soluções <span aria-hidden="true">↗</span></span>
+                </div>
+              </a>
             </article>
-            <article class="about-solution">
-              <img src="/home/users.webp" alt="Pessoa consultando o celular em um estabelecimento" width="634" height="444" loading="lazy" decoding="async" />
-              <div class="about-solution__copy">
-                <h3>Para Usuários</h3>
-                <p>Tenha seus benefícios na palma da mão. Controle seu saldo, extrato e encontre a rede credenciada perto de você.</p>
-                <a class="action-link" href="/usuarios/">Conheça as soluções <span aria-hidden="true">→</span></a>
-              </div>
+            <article class="about-solution" data-reveal>
+              <a class="about-solution__link" href="/usuarios/" aria-labelledby="about-solution-usuarios-title">
+                <span class="about-solution__media"><img src="/quem-somos/solution-users.webp" alt="Pessoa consultando o celular em um estabelecimento" width="634" height="444" loading="lazy" decoding="async" /></span>
+                <div class="about-solution__copy">
+                  <h3 id="about-solution-usuarios-title">Para Usuários</h3>
+                  <p>Tenha seus benefícios na palma da mão. Controle seu saldo, extrato e encontre a rede credenciada perto de você.</p>
+                  <span class="about-solution__action">Conheça as soluções <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
             </article>
-            <article class="about-solution">
-              <img src="/home/establishments.webp" alt="Pessoa usando uma máquina de cartões" width="634" height="444" loading="lazy" decoding="async" />
-              <div class="about-solution__copy">
-                <h3>Para Estabelecimentos</h3>
-                <p>Seja um credenciado e amplie suas vendas. Aceite BPF Cartões e atraia mais clientes.</p>
-                <a class="action-link" href="/estabelecimentos/">Conheça as soluções <span aria-hidden="true">↗</span></a>
-              </div>
+            <article class="about-solution" data-reveal>
+              <a class="about-solution__link" href="/estabelecimentos/" aria-labelledby="about-solution-estabelecimentos-title">
+                <span class="about-solution__media"><img src="/quem-somos/solution-establishments.webp" alt="Pessoa usando uma máquina de cartões" width="634" height="444" loading="lazy" decoding="async" /></span>
+                <div class="about-solution__copy">
+                  <h3 id="about-solution-estabelecimentos-title">Para Estabelecimentos</h3>
+                  <p>Seja um credenciado e amplie suas vendas. Aceite BPF Cartões e atraia mais clientes.</p>
+                  <span class="about-solution__action">Conheça as soluções <span aria-hidden="true">↗</span></span>
+                </div>
+              </a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="about-feature inset-feature" aria-labelledby="about-feature-title">
-        <div class="about-feature__media">
-          <img src="/home/card.webp" alt="Mão segurando um cartão BPF Cartões" width="960" height="699" loading="lazy" decoding="async" />
+      <section class="about-feature" aria-labelledby="about-feature-title">
+        <div class="about-feature__media" data-reveal>
+          <img src="/quem-somos/feature-card.webp" alt="Frente e verso dos cartões BPF" width="1440" height="1262" loading="lazy" decoding="async" />
         </div>
-        <div class="about-feature__copy">
+        <div class="about-feature__copy" data-reveal>
           <h2 id="about-feature-title">A BPF Cartões é a escolha certa para sua empresa</h2>
           <p>Seja você uma empresa, um usuário ou um estabelecimento, a BPF Cartões oferece soluções inteligentes de benefícios para tornar sua vida mais fácil e segura. Estamos focados em tecnologia e na excelência de nossos serviços para entregar a melhor experiência.</p>
           <a href="tel:08007770606">QUERO SER BPF <span aria-hidden="true">→</span></a>

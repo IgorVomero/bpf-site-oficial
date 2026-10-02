@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/usuarios.css" />
     <script type="module" src="/src/navbar.ts"></script>
+    <script type="module" src="/src/reveal.ts"></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -47,7 +48,7 @@
 
     <main id="conteudo">
       <div class="inner-page-banner usuarios-banner">
-        <div class="container">
+        <div class="container" data-reveal>
           <h1>Soluções para Usuários</h1>
           <p>Vale Refeição · Vale Alimentação · Prime Flexível</p>
         </div>
@@ -55,22 +56,22 @@
 
       <section class="usuarios-benefits" aria-labelledby="usuarios-benefits-title">
         <div class="container">
-          <div class="usuarios-benefits__intro">
+          <div class="usuarios-benefits__intro" data-reveal>
             <h2 id="usuarios-benefits-title">BPF Cartões: O seu dia a dia mais fácil</h2>
             <p>Conheça as vantagens de ter um BPF Cartões e tenha o controle total de seus benefícios na palma da mão. Nossa missão é oferecer facilidade e segurança para que você se preocupe apenas com o que realmente importa.</p>
           </div>
           <div class="usuarios-benefits__grid">
-            <article class="usuarios-benefit">
+            <article class="usuarios-benefit" data-reveal>
               <img src="/usuarios/vale-refeicao.webp" alt="" width="152" height="152" loading="lazy" decoding="async" />
               <h3>Vale Refeição</h3>
               <p>Use em restaurantes, lanchonetes e estabelecimentos de comida.</p>
             </article>
-            <article class="usuarios-benefit">
+            <article class="usuarios-benefit" data-reveal>
               <img src="/usuarios/vale-alimentacao.webp" alt="" width="152" height="152" loading="lazy" decoding="async" />
               <h3>Vale Alimentação</h3>
               <p>Compre em supermercados, mercearias e açougues para abastecer sua casa.</p>
             </article>
-            <article class="usuarios-benefit">
+            <article class="usuarios-benefit" data-reveal>
               <img src="/usuarios/prime-flex.webp" alt="" width="152" height="152" loading="lazy" decoding="async" />
               <h3>Prime Flexível</h3>
               <p>Múltiplos benefícios em um único cartão.</p>
@@ -81,28 +82,31 @@
 
       <section class="usuarios-app" aria-labelledby="usuarios-app-title">
         <div class="container usuarios-app__grid">
-          <div class="usuarios-app__copy">
+          <div class="usuarios-app__copy" data-reveal>
             <h2 id="usuarios-app-title">Seu cartão, suas informações no App!</h2>
             <p>Com o aplicativo BPF Cartões, você pode gerenciar seu saldo, extrato e rede credenciada de forma simples e rápida, na palma da sua mão. O aplicativo foi feito para ser intuitivo e prático, ajudando você a encontrar os melhores lugares para usar seu cartão e conferir seu saldo a qualquer momento.</p>
-            <aside class="usuarios-download" aria-labelledby="usuarios-download-title">
-              <div class="usuarios-download__panel">
-                <h2 id="usuarios-download-title">Baixe Agora o App</h2>
-                <div class="usuarios-download__stores">
-                  <a href="https://apps.apple.com/br/app/bpf-cart%C3%B5es/id1579950979" target="_blank" rel="noopener noreferrer" aria-label="Baixe o app para iPhone">
-                    <img src="/app-store-badge.webp" alt="Baixar na App Store" width="162" height="50" loading="lazy" decoding="async" />
-                    <span>Para iPhone</span>
-                  </a>
-                  <a href="https://play.google.com/store/apps/details?hl=pt&amp;id=br.com.bpfcartoes.app" target="_blank" rel="noopener noreferrer" aria-label="Baixe o app para Android">
-                    <img src="/google-play-badge.webp" alt="Disponível no Google Play" width="162" height="50" loading="lazy" decoding="async" />
-                    <span>Para Android</span>
-                  </a>
-                </div>
-              </div>
-            </aside>
           </div>
-          <img class="usuarios-app__image" src="/usuarios/aplicativo-bpf.webp" alt="Imagem ilustrativa do aplicativo BPF Cartões em um celular" width="341" height="731" loading="lazy" decoding="async" />
+          <img class="usuarios-app__image" data-reveal src="/usuarios/aplicativo-bpf.webp" alt="Imagem ilustrativa do aplicativo BPF Cartões em um celular" width="341" height="731" loading="lazy" decoding="async" />
         </div>
       </section>
+
+      <aside class="usuarios-download" aria-labelledby="usuarios-download-title">
+        <div class="container">
+          <div class="usuarios-download__panel" data-reveal>
+            <h2 id="usuarios-download-title">Baixe Agora o App</h2>
+            <div class="usuarios-download__stores">
+              <a href="https://apps.apple.com/br/app/bpf-cart%C3%B5es/id1579950979" target="_blank" rel="noopener noreferrer" aria-label="Baixe o app para iPhone">
+                <img src="/app-store-badge.webp" alt="Baixar na App Store" width="162" height="50" loading="lazy" decoding="async" />
+                <span>Para iPhone</span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?hl=pt&amp;id=br.com.bpfcartoes.app" target="_blank" rel="noopener noreferrer" aria-label="Baixe o app para Android">
+                <img src="/google-play-badge.webp" alt="Disponível no Google Play" width="162" height="50" loading="lazy" decoding="async" />
+                <span>Para Android</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
     </main>
 
     <footer class="site-footer">

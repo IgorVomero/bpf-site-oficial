@@ -58,6 +58,44 @@ portal are absent from the ZIP. The establishment CTA export also contains
 baked-in copy. Existing backgrounds remain unchanged where the full photograph
 cannot be recovered without generating replacement content.
 
+## Section rhythm foundation
+
+`src/styles/global.css` defines three opt-in vertical-spacing tokens:
+
+| Token | Definition | At 1024 / 1440px | Mobile minimum / maximum |
+| --- | --- | --- | --- |
+| `--section-space-spacious` | `clamp(3rem, 7vw, 7rem)` | 71.68 / 100.8px | 48 / 112px |
+| `--section-space-standard` | `clamp(2.5rem, 5.5vw, 5.5rem)` | 56.32 / 79.2px | 40 / 88px |
+| `--section-space-compact` | `clamp(2rem, 4vw, 4rem)` | 40.96 / 57.6px | 32 / 64px |
+
+Values assume the default 16px root font size. During future page-by-page
+polish, choose a level for each section and apply it through that page's CSS:
+
+```css
+.example-section {
+  background: var(--surface);
+  padding-block: var(--section-space-standard);
+}
+```
+
+The section that paints the background also owns its top and bottom padding.
+Adjacent red and lilac sections meet directly; lilac padding stays inside the
+lilac section. Do not introduce spacer elements, white separator bands, or
+external vertical margins to create section breathing room. Internal component
+gaps remain independent. Review each section at desktop and mobile widths before
+adopting a token; do not apply the foundation globally to every `section`.
+No existing section consumes these tokens yet, and the approved Quem Somos
+spacing remains unchanged.
+
+The final Quem Somos product visual uses the approved `img-40 3.png` from the
+local `BPF Site (Copy).zip`, the same front/back stack already used in
+`public/empresas/cartoes-bpf.webp`. Its original is 1898 × 2316px (944,932 bytes).
+Only transparent outer margins were trimmed, retaining an 8px safety inset,
+before downsampling and WebP encoding at quality 95. The replacement
+`public/quem-somos/feature-card.webp` is 1440 × 1262px (140,154 bytes) with alpha.
+It replaces the incorrect hand/card photograph in that feature; card artwork
+is preserved without generating or fabricating product details.
+
 ## Privacy-policy URLs
 
 The legal text has one maintained copy at `bpf-politicas-privacidade/index.html`.

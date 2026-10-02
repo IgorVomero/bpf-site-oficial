@@ -12,20 +12,12 @@
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 3rem;
+  /* Opt-in section padding; apply on the element that owns the background.
+     Existing page spacing stays unchanged until its individual polish pass. */
+  --section-space-spacious: clamp(3rem, 7vw, 7rem);
+  --section-space-standard: clamp(2.5rem, 5.5vw, 5.5rem);
+  --section-space-compact: clamp(2rem, 4vw, 4rem);
   --radius-small: 0.5rem;
-  --radius-card: 1.375rem;
-  --radius-large: 1.75rem;
-  --radius-pill: 999px;
-  --surface-soft: #f7f7f5;
-  --surface-neutral: #f1f2f0;
-  --text-secondary: #5e6265;
-  --border-subtle: #e4e5e1;
-  --shadow-soft: 0 12px 36px rgb(0 0 0 / 6%);
-  --section-space: clamp(3rem, 5.5vw, 5rem);
-  --section-gap: clamp(1.5rem, 3vw, 2.5rem);
-  --card-padding: clamp(1.5rem, 2.2vw, 2rem);
-  --heading-section: clamp(1.75rem, 2.65vw, 2.375rem);
-  --button-padding: 0.8rem 1.5rem;
   --font-heading: 'Kumbh Sans', system-ui, sans-serif;
   --font-body: 'Mulish', system-ui, sans-serif;
 }
@@ -360,69 +352,27 @@ h1 {
   font-size: clamp(2.25rem, 5vw, 3.5rem);
 }
 
-/* Static visual system: intentionally scoped away from the navbar. */
-main :is(h1, h2, h3) {
-  text-wrap: balance;
-}
-
-main h2 {
-  letter-spacing: -0.025em;
-}
-
-main :is(p, li) {
-  text-wrap: pretty;
-}
-
-main :is(section, aside)[id] {
-  scroll-margin-top: 6rem;
-}
-
-.action-link {
-  display: inline-flex;
-  min-height: 2.75rem;
-  align-items: center;
-  gap: 0.65rem;
-  color: var(--red-dark);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  line-height: 1.4;
-  text-decoration: none;
-}
-
-.action-link:focus-visible {
-  outline: 3px solid var(--red);
-  outline-offset: 4px;
-}
-
-.action-link > span[aria-hidden] {
-  font-size: 1.1em;
-}
-
-.inset-feature {
-  width: min(calc(100% - 2rem), var(--content-width));
-  margin-inline: auto;
-  overflow: hidden;
-  border-radius: var(--radius-large);
-}
-
 .inner-page-banner {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(2.5rem, 4.5vw, 4rem);
-  color: var(--dark);
-  background: var(--surface-soft);
-  width: min(calc(100% - 2rem), var(--content-width));
-  margin-inline: auto;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-large);
+  padding-block: clamp(3.5rem, 7vw, 5.5rem);
+  color: var(--white);
+  background: var(--red);
+}
+
+.inner-page-banner::after {
+  position: absolute;
+  inset: auto -12% -200% auto;
+  width: 65vw;
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
 }
 
 .inner-page-banner h1 {
   margin: 0;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  max-width: 28ch;
-  margin-inline: auto;
-  letter-spacing: -0.035em;
 }
 
 .privacy-policy {
@@ -452,8 +402,8 @@ main :is(section, aside)[id] {
 }
 
 .site-footer {
-  border-top: 1px solid var(--border-subtle);
-  padding-block: clamp(3rem, 5vw, 4.5rem) 0;
+  border-top: 1px solid #dedfe2;
+  padding-block: clamp(3.5rem, 6vw, 5.5rem) 0;
   color: #60656b;
   background: #f7f7f5;
 }
@@ -548,8 +498,8 @@ main :is(section, aside)[id] {
   align-items: center;
   justify-content: space-between;
   gap: 1rem 2rem;
-  margin-top: clamp(2.5rem, 4vw, 3.5rem);
-  border-top: 1px solid var(--border-subtle);
+  margin-top: clamp(3rem, 5vw, 5rem);
+  border-top: 1px solid #dedfe2;
   padding-block: 1.4rem;
   font-size: 0.8rem;
 }

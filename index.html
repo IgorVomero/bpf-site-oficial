@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/home.css" />
     <script type="module" src="/src/navbar.ts"></script>
+    <script type="module" src="/src/reveal.ts"></script>
+    <script type="module" src="/src/home-contact.ts"></script>
   </head>
   <body class="home-page">
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -21,7 +23,6 @@
           </a>
 
           <nav class="site-nav" aria-label="Navegação principal">
-            <a href="/" aria-current="page">Início</a>
             <a href="/quem-somos/">Quem Somos</a>
             <a href="/empresas/">Empresas</a>
             <a href="/usuarios/">Usuários</a>
@@ -33,7 +34,6 @@
           <details class="mobile-nav">
             <summary>Menu <span class="mobile-nav__icon" aria-hidden="true"></span></summary>
             <nav aria-label="Navegação principal">
-              <a href="/" aria-current="page">Início</a>
               <a href="/quem-somos/">Quem Somos</a>
               <a href="/empresas/">Empresas</a>
               <a href="/usuarios/">Usuários</a>
@@ -59,7 +59,7 @@
       </section>
 
       <section class="home-audiences" id="publicos" aria-label="Públicos da BPF Cartões">
-        <div class="container home-audiences__panel">
+        <div class="container home-audiences__panel" data-reveal-group>
           <article>
             <h2>Para Empresas</h2>
             <p>Ofereça os melhores benefícios aos seus colaboradores. Ganhe em facilidade, segurança e agilidade.</p>
@@ -80,12 +80,12 @@
 
       <section class="home-benefits" aria-labelledby="home-benefits-title">
         <div class="container">
-          <div class="home-benefits__intro">
+          <div class="home-benefits__intro" data-reveal>
             <h2 id="home-benefits-title">BPF Cartões impulsiona sua gestão e valoriza seus colaboradores.</h2>
             <p>Oferecemos uma gama completa de benefícios, desenhados para atender às suas necessidades.</p>
             <p>Nossas soluções são intuitivas e trazem a segurança que você e seus colaboradores precisam.</p>
           </div>
-          <div class="home-benefits__grid">
+          <div class="home-benefits__grid" data-reveal-group>
             <article class="home-benefit">
               <img src="/home/vale-alimentacao.webp" alt="" width="192" height="192" loading="lazy" decoding="async" />
               <h3>Vale Alimentação</h3>
@@ -107,16 +107,16 @@
 
       <div class="container home-solutions">
         <section class="solution-row" id="empresas">
-          <div class="solution-row__copy">
+          <div class="solution-row__copy" data-reveal>
             <h2>Soluções para sua empresa</h2>
             <p>Simplifique a gestão de benefícios e ofereça mais valor aos seus colaboradores. <strong>Contrate os cartões BPF</strong> e tenha a ferramenta ideal para garantir transparência, segurança e eficiência no dia a dia da sua empresa.</p>
             <a class="home-button" href="/empresas/">Simplifique seus benefícios <span aria-hidden="true">→</span></a>
           </div>
-          <img src="/home/companies.webp" alt="Pessoa analisando documentos e gráficos" width="634" height="444" loading="lazy" decoding="async" />
+          <img src="/home/companies.webp" data-reveal alt="Pessoa analisando documentos e gráficos" width="634" height="444" loading="lazy" decoding="async" />
         </section>
 
         <section class="solution-row solution-row--image-first" id="usuarios">
-          <div class="solution-row__copy">
+          <div class="solution-row__copy" data-reveal>
             <h2>Soluções para usuários</h2>
             <p>Tenha o controle dos seus benefícios na palma da mão! <strong>Faça o download do nosso app</strong> e consiga consultar saldo, extrato e encontrar parceiros com total rapidez e segurança.</p>
             <div class="solution-row__links">
@@ -124,21 +124,21 @@
               <a class="home-button home-button--outline" href="https://apps.apple.com/br/app/bpf-cart%C3%B5es/id1579950979" target="_blank" rel="noopener noreferrer">App Store <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <img src="/home/users.webp" alt="Pessoa consultando o celular em um estabelecimento" width="634" height="444" loading="lazy" decoding="async" />
+          <img src="/home/users.webp" data-reveal alt="Pessoa consultando o celular em um estabelecimento" width="634" height="444" loading="lazy" decoding="async" />
         </section>
 
         <section class="solution-row" id="estabelecimentos">
-          <div class="solution-row__copy">
+          <div class="solution-row__copy" data-reveal>
             <h2>Soluções para estabelecimentos</h2>
             <p>Atraia mais clientes com a confiança de uma empresa que valoriza seus parceiros. <strong>Faça o seu credenciamento aqui</strong> através de um processo simples e totalmente sem dores de cabeça.</p>
             <a class="home-button" href="/estabelecimentos/">Faça parte da nossa rede credenciada <span aria-hidden="true">→</span></a>
           </div>
-          <img src="/home/establishments.webp" alt="Pessoa usando uma máquina de cartões" width="634" height="444" loading="lazy" decoding="async" />
+          <img src="/home/establishments.webp" data-reveal alt="Pessoa usando uma máquina de cartões" width="634" height="444" loading="lazy" decoding="async" />
         </section>
       </div>
 
       <section class="home-metrics" aria-label="A BPF Cartões em números">
-        <dl class="container home-metrics__grid">
+        <dl class="container home-metrics__grid" data-reveal>
           <div><dt>Cartões Emitidos</dt><dd>300k+</dd></div>
           <div><dt>Estabelecimentos Parceiros</dt><dd>300</dd></div>
           <div><dt>Empresas Parceiras</dt><dd>600</dd></div>
@@ -146,18 +146,20 @@
       </section>
 
       <section class="home-card-feature" aria-labelledby="card-feature-title">
-        <div class="home-card-feature__media">
-          <img src="/home/card.webp" alt="Mão segurando um cartão BPF Cartões" width="960" height="699" loading="lazy" decoding="async" />
+        <div class="home-card-feature__media" data-reveal aria-hidden="true">
+          <img src="/home/bpf-card-feature.webp" alt="" width="2172" height="724" loading="lazy" decoding="async" />
         </div>
-        <div class="home-card-feature__copy">
-          <h2 id="card-feature-title">A BPF Cartões é a escolha certa para sua empresa</h2>
-          <p>Seja você uma empresa, um usuário ou um estabelecimento, a BPF Cartões oferece soluções inteligentes de benefícios para tornar sua vida mais fácil e segura. Estamos focados em tecnologia e na excelência de nossos serviços para entregar a melhor experiência.</p>
-          <a class="home-button home-button--light" href="tel:08007770606">QUERO SER BPF <span aria-hidden="true">→</span></a>
+        <div class="container home-card-feature__content">
+          <div class="home-card-feature__copy" data-reveal>
+            <h2 id="card-feature-title">A BPF Cartões é a escolha certa para sua empresa</h2>
+            <p>Seja você uma empresa, um usuário ou um estabelecimento, a BPF Cartões oferece soluções inteligentes de benefícios para tornar sua vida mais fácil e segura. Estamos focados em tecnologia e na excelência de nossos serviços para entregar a melhor experiência.</p>
+            <a class="home-button home-button--light" href="tel:08007770606">QUERO SER BPF <span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </section>
 
       <section class="home-faq" aria-labelledby="faq-title">
-        <div class="container home-faq__inner">
+        <div class="container home-faq__inner" data-reveal>
           <h2 id="faq-title">Perguntas Frequentes</h2>
           <details>
             <summary>Quais benefícios a BPF Cartões oferece?</summary>
@@ -187,16 +189,34 @@
       </section>
 
       <section class="home-contact" id="contato" aria-labelledby="contact-title">
-        <div class="container home-contact__grid">
-          <div>
+        <div class="container">
+          <div class="home-contact__intro" data-reveal>
             <h2 id="contact-title">Entre em contato com a BPF Cartões</h2>
-            <p>Entre em contato e descubra como podemos ajudar.</p>
+            <p>Fale com nossa equipe pelos canais oficiais.</p>
           </div>
-          <div class="home-contact__details">
-            <p><strong>Telefone</strong><a href="tel:08007770606">0800 777 0606</a></p>
-            <p><strong>WhatsApp</strong>0800 777 0606</p>
-            <p><strong>E-mail</strong><a href="mailto:faleconosco@bpfcartoes.com.br">faleconosco@bpfcartoes.com.br</a></p>
-            <address>Av. Pedro Botesi, 2171<br />Jardim Scomparim<br />Mogi Mirim/SP<br />CEP 13.806-635</address>
+          <div class="home-contact__cards" data-reveal-group>
+            <a class="home-contact-card" href="tel:08007770606">
+              <span class="home-contact-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2C9.1 21 3 14.9 3 5a2 2 0 0 1 2-2Z" /></svg></span>
+              <span class="home-contact-card__label">Telefone</span>
+            </a>
+            <a class="home-contact-card" href="https://wa.me/558007770606" target="_blank" rel="noopener noreferrer">
+              <span class="home-contact-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a9 9 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3a8.5 8.5 0 0 1 8.5 8.5Z" /><path d="M8 10h8m-8 4h5" /></svg></span>
+              <span class="home-contact-card__label">WhatsApp</span>
+            </a>
+            <a class="home-contact-card" href="mailto:faleconosco@bpfcartoes.com.br">
+              <span class="home-contact-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg></span>
+              <span class="home-contact-card__label">E-mail</span>
+            </a>
+            <div class="home-contact-location">
+              <button class="home-contact-card" type="button" id="home-contact-location-trigger" aria-expanded="false" aria-controls="home-contact-location-options">
+                <span class="home-contact-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg></span>
+                <span class="home-contact-card__label">Endereço</span>
+              </button>
+              <div class="home-contact-location__options" id="home-contact-location-options" role="group" aria-label="Opções de navegação" hidden>
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.%20Pedro%20Botesi%2C%202171%2C%20Jardim%20Scomparim%2C%20Mogi%20Mirim%2FSP%2C%20CEP%2013.806-635%2C%20Brasil" target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a>
+                <a href="https://waze.com/ul?q=Av.%20Pedro%20Botesi%2C%202171%2C%20Jardim%20Scomparim%2C%20Mogi%20Mirim%2FSP%2C%20CEP%2013.806-635%2C%20Brasil&amp;navigate=yes" target="_blank" rel="noopener noreferrer">Abrir no Waze</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -211,35 +231,35 @@
             </a>
             <p class="site-footer__company">BPF Cartões</p>
             <p>CNPJ 02.030.078/0001-84</p>
-            <address>Av. Pedro Botesi, 2171<br />Jardim Scomparim<br />Mogi Mirim/SP<br />CEP 13.806-635</address>
+            <address>Av. Pedro Botesi, 2171<br />Jardim Scomparim<span class="site-footer__address-separator" aria-hidden="true"> · </span><br class="site-footer__address-break" />Mogi Mirim/SP<br />CEP 13.806-635</address>
           </div>
 
-          <div>
+          <div class="site-footer__contact">
             <h2>Contato</h2>
             <ul>
               <li><a href="tel:08007770606">0800 777 0606</a></li>
-              <li>WhatsApp: 0800 777 0606</li>
+              <li><a href="https://wa.me/558007770606" target="_blank" rel="noopener noreferrer">WhatsApp: 0800 777 0606</a></li>
               <li><a href="mailto:faleconosco@bpfcartoes.com.br">faleconosco@bpfcartoes.com.br</a></li>
               <li><a href="mailto:privacidade@bpfcartoes.com.br">privacidade@bpfcartoes.com.br</a></li>
             </ul>
           </div>
 
-          <nav aria-label="Acessos externos">
+          <nav class="site-footer__access" aria-label="Acessos externos">
             <h2>Acessos</h2>
             <ul>
-              <li><a href="https://portalbpf.virtusinfo.com.br/pages/?" target="_blank" rel="noopener noreferrer">Portal das empresas <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Portal das empresas <span aria-hidden="true">↗</span></a></li>
               <li><a href="https://bpf.sistemaexpert.com.br/administrativo/" target="_blank" rel="noopener noreferrer">Área dos estabelecimentos credenciados <span aria-hidden="true">↗</span></a></li>
             </ul>
           </nav>
 
-          <nav aria-label="Baixe o aplicativo BPF Cartões">
+          <nav class="site-footer__apps" aria-label="Baixe o aplicativo BPF Cartões">
             <h2>Baixe o aplicativo</h2>
             <div class="site-footer__stores">
               <a href="https://play.google.com/store/apps/details?hl=pt&amp;id=br.com.bpfcartoes.app" target="_blank" rel="noopener noreferrer">
-                <img src="/google-play-badge.webp" alt="Disponível no Google Play" width="162" height="50" loading="lazy" decoding="async" />
+                <img src="/google-play-badge.webp" alt="Disponível no Google Play" width="360" height="111" loading="lazy" decoding="async" />
               </a>
               <a href="https://apps.apple.com/br/app/bpf-cart%C3%B5es/id1579950979" target="_blank" rel="noopener noreferrer">
-                <img src="/app-store-badge.webp" alt="Baixar na App Store" width="162" height="50" loading="lazy" decoding="async" />
+                <img src="/app-store-badge.webp" alt="Baixar na App Store" width="360" height="111" loading="lazy" decoding="async" />
               </a>
             </div>
           </nav>

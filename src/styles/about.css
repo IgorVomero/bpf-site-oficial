@@ -388,33 +388,6 @@
   outline-color: var(--white);
 }
 
-/* Reuse reveal.ts and the approved timing; no new controller or global CSS. */
-[data-reveal].reveal-ready {
-  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.about-history article.reveal-ready,
-.about-solution.reveal-ready {
-  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms), transform 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms), box-shadow 280ms ease, border-color 280ms ease;
-}
-
-[data-reveal].reveal-pending {
-  opacity: 0;
-  transform: translateY(18px);
-}
-
-[data-reveal].reveal-ready:not(.reveal-pending) {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.about-history__grid article:nth-child(2),
-.about-solution:nth-child(2) { --reveal-delay: 70ms; }
-
-.about-history__grid article:nth-child(3),
-.about-solution:nth-child(3) { --reveal-delay: 140ms; }
-
 @media (hover: hover) and (pointer: fine) {
   .about-history article:hover {
     transform: translateY(-3px);
@@ -536,7 +509,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal],
   .about-history article,
   .about-history__icon,
   .about-solution,

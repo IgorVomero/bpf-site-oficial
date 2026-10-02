@@ -14,28 +14,244 @@
   max-width: 66rem;
 }
 
+.contato-contact {
+  padding-block: var(--section-space-compact);
+  background: #fafafa;
+}
+
+.contato-section-intro {
+  max-width: 48rem;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+}
+
+.contato-section-intro h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 2.6vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.contato-section-intro p {
+  margin: 0.625rem 0 0;
+  color: #51565c;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Match the approved Home shortcuts locally; reuse their unchanged controller. */
+.home-contact__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.875rem, 1.4vw, 1.25rem);
+}
+
+.home-contact-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  min-height: 8rem;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  border: 1px solid #e8e9ec;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  color: var(--dark);
+  background: var(--white);
+  box-shadow: 0 2px 4px rgb(34 34 34 / 2%), 0 10px 22px -16px rgb(34 34 34 / 14%);
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+  appearance: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
+}
+
+.home-contact-card::after {
+  position: absolute;
+  inset: auto auto -1px 50%;
+  width: 2rem;
+  height: 1px;
+  background: rgb(205 32 38 / 28%);
+  transform: translateX(-50%);
+  transition: background-color 280ms ease;
+  content: '';
+}
+
+.home-contact-card__icon {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #f0ecee;
+  border-radius: 50%;
+  color: var(--red-dark);
+  background: #fffafb;
+  box-shadow: 0 3px 12px rgb(205 32 38 / 5%);
+  transition: transform 280ms ease, box-shadow 280ms ease;
+}
+
+.home-contact-card__icon svg {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.home-contact-card__label {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-contact-card:focus-visible {
+  outline: 3px solid var(--red-dark);
+  outline-offset: 4px;
+}
+
+.home-contact-location {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+}
+
+.home-contact-location__options {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  display: grid;
+  width: max(100%, 14rem);
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  border: 1px solid #e8e9ec;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  background: var(--white);
+  box-shadow: 0 8px 28px rgb(34 34 34 / 12%);
+}
+
+.home-contact-location__options[hidden] {
+  display: none;
+}
+
+.home-contact-location[data-placement='above'] .home-contact-location__options {
+  top: auto;
+  bottom: calc(100% + 0.5rem);
+}
+
+.home-contact-location__options a {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  border-radius: 0.375rem;
+  padding: 0.625rem 0.75rem;
+  color: var(--dark);
+  font-size: 1rem;
+  line-height: 1.4;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-contact-location__options a:hover {
+  color: var(--red-dark);
+  background: #fff5f6;
+}
+
+.home-contact-location__options a:focus-visible {
+  outline: 2px solid var(--red-dark);
+  outline-offset: -2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-contact-card:hover {
+    transform: translateY(-3px);
+    border-color: rgb(205 32 38 / 24%);
+    box-shadow: 0 6px 12px rgb(34 34 34 / 5%), 0 18px 32px -16px rgb(34 34 34 / 22%);
+  }
+
+  .home-contact-card:hover .home-contact-card__icon {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgb(205 32 38 / 8%);
+  }
+
+  .home-contact-card:hover::after {
+    background: rgb(205 32 38 / 60%);
+  }
+}
+
+@media (max-width: 60rem) {
+  .home-contact__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.contato-privacy {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.contato-privacy h3 {
+  margin: 0 0 0.375rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.contato-privacy p {
+  margin: 0;
+  color: #51565c;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.contato-privacy a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  max-width: 100%;
+  color: var(--red-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
 .contato-audiences {
-  padding-block: clamp(3rem, 6vw, 6rem);
+  padding-block: var(--section-space-compact) var(--section-space-standard);
 }
 
 .contato-audiences__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1rem, 3vw, 3rem);
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
 .contato-audience {
+  display: flex;
   min-width: 0;
-  border-radius: var(--radius-small);
-  background: #f3f3f3;
+  flex-direction: column;
+  border: 1px solid #ececef;
+  border-radius: 0.75rem;
+  color: var(--dark);
+  background: var(--white);
+  box-shadow: 0 12px 28px -20px rgb(34 34 34 / 18%);
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease;
 }
 
 .contato-audience__media {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: var(--radius-small) var(--radius-small) 0 0;
+  border-radius: calc(0.75rem - 1px) calc(0.75rem - 1px) 0 0;
   color: var(--white);
 }
 
@@ -45,6 +261,7 @@
   inset: 0;
   background: linear-gradient(transparent 15%, rgb(22 22 24 / 88%));
   content: '';
+  pointer-events: none;
 }
 
 .contato-audience img {
@@ -53,169 +270,108 @@
   width: 100%;
   aspect-ratio: 1.62;
   object-fit: cover;
+  transition: transform 280ms ease;
 }
 
-.contato-audience h2 {
+.contato-audience h3 {
   position: absolute;
-  inset: auto 1.5rem 1.25rem;
+  inset: auto 1.25rem 1.125rem;
   margin: 0;
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1.5vw, 1.35rem);
+  line-height: 1.3;
+}
+
+.contato-audience__copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
 }
 
 .contato-audience p {
   margin: 0;
-  padding: 1.25rem 1.5rem;
-  font-size: 0.95rem;
-  line-height: 1.7;
+  color: #51565c;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  text-wrap: pretty;
 }
 
-.contato-audience:hover h2 {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
-.contato-contact {
-  padding-bottom: clamp(3.5rem, 7vw, 7rem);
-}
-
-.contato-contact__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  align-items: center;
-  gap: clamp(2rem, 5vw, 5rem);
-}
-
-.contato-contact__copy h2 {
-  max-width: 18ch;
-  margin: 0 0 1.5rem;
-  font-size: clamp(1.9rem, 3vw, 2.75rem);
-}
-
-.contato-contact__copy > p {
-  max-width: 40ch;
-  margin: 0;
-  line-height: 1.8;
-}
-
-.contato-contacts {
-  display: grid;
-  gap: 1.25rem;
-  margin: 2rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.contato-contacts strong {
-  display: block;
-  font-size: 0.9rem;
-}
-
-.contato-contacts a,
-.contato-contact__panel > a:not(.contato-button) {
+.contato-audience__action {
   display: inline-flex;
   min-height: 2.75rem;
   align-items: center;
-  max-width: 100%;
+  gap: 0.5rem;
+  margin-top: auto;
   color: var(--red-dark);
+  font-size: 0.9rem;
   font-weight: 700;
-  overflow-wrap: anywhere;
 }
 
-.contato-contact__panel {
-  min-width: 0;
-  border-radius: 0 0 0 1.5rem;
-  padding: clamp(1.5rem, 3.5vw, 3rem);
-  background: #f3f3f3;
+.contato-audience__action > span {
+  display: inline-block;
+  transition: transform 280ms ease;
 }
 
-.contato-contact__panel h3 {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-heading);
-  font-size: 1.125rem;
+.contato-audience:focus-visible {
+  outline: 3px solid var(--red-dark);
+  outline-offset: 4px;
+  border-radius: 0.75rem;
 }
 
-.contato-contact__panel address {
-  margin-bottom: 1.75rem;
-  border-bottom: 1px solid #dddfe5;
-  padding-bottom: 1.75rem;
-  font-style: normal;
-  line-height: 1.8;
-}
+@media (hover: hover) and (pointer: fine) {
+  .contato-audience:hover {
+    transform: translateY(-4px);
+    border-color: rgb(205 32 38 / 16%);
+    box-shadow: 0 5px 10px rgb(34 34 34 / 4%), 0 20px 38px -18px rgb(34 34 34 / 24%);
+  }
 
-.contato-button {
-  display: flex;
-  min-height: 3rem;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  width: fit-content;
-  max-width: 100%;
-  margin-top: 1.75rem;
-  border-radius: 999px;
-  padding: 0.75rem 1.75rem;
-  color: var(--white);
-  background: var(--red);
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-}
+  .contato-audience:hover img {
+    transform: scale(1.02);
+  }
 
-.contato-button:hover {
-  background: var(--red-dark);
-}
-
-.contato-institution {
-  padding-block: clamp(3rem, 6vw, 5.5rem);
-  color: var(--white);
-  background: var(--red);
-  text-align: center;
-}
-
-.contato-institution h2 {
-  max-width: 28ch;
-  margin: 0 auto 1rem;
-  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
-}
-
-.contato-institution p {
-  margin: 0;
+  .contato-audience:hover .contato-audience__action > span {
+    transform: translateX(3px);
+  }
 }
 
 @media (max-width: 48rem) {
-  .contato-contact__grid {
+  .contato-audiences__grid {
+    max-width: 32rem;
     grid-template-columns: 1fr;
-  }
-
-  .contato-contact__copy h2 {
-    max-width: 24ch;
-  }
-
-  .contato-audience h2 {
-    inset-inline: 1rem;
-    bottom: 1rem;
-    font-size: 1rem;
-  }
-
-  .contato-audience p {
-    padding: 1rem;
-    font-size: 0.875rem;
+    gap: 1.5rem;
+    margin-inline: auto;
   }
 }
 
-@media (max-width: 40rem) {
-  .contato-audiences__grid {
+@media (max-width: 36rem) {
+  .home-contact__cards {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 
-  .contato-audience h2 {
-    inset-inline: 1.5rem;
-    bottom: 1.25rem;
-    font-size: 1.25rem;
+  .home-contact-card {
+    min-height: 5.5rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1.125rem;
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-contact-card,
+  .home-contact-card__icon,
+  .contato-audience,
+  .contato-audience img,
+  .contato-audience__action > span {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
-  .contato-audience p {
-    padding: 1.25rem 1.5rem;
-    font-size: 0.95rem;
+  .home-contact-card::after {
+    transition: none;
   }
 }

@@ -22,7 +22,6 @@
           </a>
 
           <nav class="site-nav" aria-label="Navegação principal">
-            <a href="/">Início</a>
             <a href="/quem-somos/" aria-current="page">Quem Somos</a>
             <a href="/empresas/">Empresas</a>
             <a href="/usuarios/">Usuários</a>
@@ -34,7 +33,6 @@
           <details class="mobile-nav">
             <summary>Menu <span class="mobile-nav__icon" aria-hidden="true"></span></summary>
             <nav aria-label="Navegação principal">
-              <a href="/">Início</a>
               <a href="/quem-somos/" aria-current="page">Quem Somos</a>
               <a href="/empresas/">Empresas</a>
               <a href="/usuarios/">Usuários</a>
@@ -79,18 +77,18 @@
             <p>A BPF Cartões foi fundada com a missão de inovar e simplificar a gestão de benefícios para empresas e prefeituras. Ao longo dos anos, evoluímos e nos especializamos em oferecer soluções completas em Vale Alimentação, Vale Refeição, Vale Transporte e muito mais, sempre com foco em tecnologia e segurança.</p>
             <p>Saímos de uma plataforma focada em banco digital e boleto para focar 100% no que realmente somos, uma empresa de cartões de benefícios. Nossa dedicação nos permitiu construir uma reputação sólida, baseada na confiança e na parceria de longo prazo com nossos clientes.</p>
           </div>
-          <div class="about-history__grid">
-            <article data-reveal>
+          <div class="about-history__grid" data-reveal-group>
+            <article>
               <div class="about-history__icon"><img src="/quem-somos/missao.webp" alt="" width="152" height="160" loading="lazy" decoding="async" /></div>
               <h3>Missão</h3>
               <p>Oferecer soluções financeiras inovadoras que simplifiquem a gestão de benefícios e despesas, proporcionando segurança, praticidade e transparência para empresas e órgãos públicos.</p>
             </article>
-            <article data-reveal>
+            <article>
               <div class="about-history__icon"><img src="/quem-somos/visao.webp" alt="" width="160" height="137" loading="lazy" decoding="async" /></div>
               <h3>Visão</h3>
               <p>Ser referência em cartões corporativos e benefícios, destacando-se pela excelência no atendimento, tecnologia de ponta e comprometimento com resultados.</p>
             </article>
-            <article data-reveal>
+            <article>
               <div class="about-history__icon"><img src="/quem-somos/valores.webp" alt="" width="78" height="69" loading="lazy" decoding="async" /></div>
               <h3>Valores</h3>
               <ul><li>Inovação</li><li>Segurança</li><li>Transparência</li><li>Comprometimento</li><li>Proximidade</li></ul>
@@ -102,8 +100,8 @@
       <section class="about-solutions" aria-labelledby="about-solutions-title">
         <div class="container">
           <h2 id="about-solutions-title" data-reveal>Conheça nossas soluções</h2>
-          <div class="about-solutions__grid">
-            <article class="about-solution" data-reveal>
+          <div class="about-solutions__grid" data-reveal-group>
+            <article class="about-solution">
               <a class="about-solution__link" href="/empresas/" aria-labelledby="about-solution-empresas-title">
                 <span class="about-solution__media"><img src="/quem-somos/solution-companies.webp" alt="Pessoa analisando documentos e gráficos" width="634" height="444" loading="lazy" decoding="async" /></span>
                 <div class="about-solution__copy">
@@ -113,7 +111,7 @@
                 </div>
               </a>
             </article>
-            <article class="about-solution" data-reveal>
+            <article class="about-solution">
               <a class="about-solution__link" href="/usuarios/" aria-labelledby="about-solution-usuarios-title">
                 <span class="about-solution__media"><img src="/quem-somos/solution-users.webp" alt="Pessoa consultando o celular em um estabelecimento" width="634" height="444" loading="lazy" decoding="async" /></span>
                 <div class="about-solution__copy">
@@ -123,7 +121,7 @@
                 </div>
               </a>
             </article>
-            <article class="about-solution" data-reveal>
+            <article class="about-solution">
               <a class="about-solution__link" href="/estabelecimentos/" aria-labelledby="about-solution-estabelecimentos-title">
                 <span class="about-solution__media"><img src="/quem-somos/solution-establishments.webp" alt="Pessoa usando uma máquina de cartões" width="634" height="444" loading="lazy" decoding="async" /></span>
                 <div class="about-solution__copy">
@@ -158,35 +156,35 @@
             </a>
             <p class="site-footer__company">BPF Cartões</p>
             <p>CNPJ 02.030.078/0001-84</p>
-            <address>Av. Pedro Botesi, 2171<br />Jardim Scomparim<br />Mogi Mirim/SP<br />CEP 13.806-635</address>
+            <address>Av. Pedro Botesi, 2171<br />Jardim Scomparim<span class="site-footer__address-separator" aria-hidden="true"> · </span><br class="site-footer__address-break" />Mogi Mirim/SP<br />CEP 13.806-635</address>
           </div>
 
-          <div>
+          <div class="site-footer__contact">
             <h2>Contato</h2>
             <ul>
               <li><a href="tel:08007770606">0800 777 0606</a></li>
-              <li>WhatsApp: 0800 777 0606</li>
+              <li><a href="https://wa.me/558007770606" target="_blank" rel="noopener noreferrer">WhatsApp: 0800 777 0606</a></li>
               <li><a href="mailto:faleconosco@bpfcartoes.com.br">faleconosco@bpfcartoes.com.br</a></li>
               <li><a href="mailto:privacidade@bpfcartoes.com.br">privacidade@bpfcartoes.com.br</a></li>
             </ul>
           </div>
 
-          <nav aria-label="Acessos externos">
+          <nav class="site-footer__access" aria-label="Acessos externos">
             <h2>Acessos</h2>
             <ul>
-              <li><a href="https://portalbpf.virtusinfo.com.br/pages/?" target="_blank" rel="noopener noreferrer">Portal das empresas <span aria-hidden="true">↗</span></a></li>
+              <li><a href="https://portalbpf.virtusinfo.com.br/bpf/pages/" target="_blank" rel="noopener noreferrer">Portal das empresas <span aria-hidden="true">↗</span></a></li>
               <li><a href="https://bpf.sistemaexpert.com.br/administrativo/" target="_blank" rel="noopener noreferrer">Área dos estabelecimentos credenciados <span aria-hidden="true">↗</span></a></li>
             </ul>
           </nav>
 
-          <nav aria-label="Baixe o aplicativo BPF Cartões">
+          <nav class="site-footer__apps" aria-label="Baixe o aplicativo BPF Cartões">
             <h2>Baixe o aplicativo</h2>
             <div class="site-footer__stores">
               <a href="https://play.google.com/store/apps/details?hl=pt&amp;id=br.com.bpfcartoes.app" target="_blank" rel="noopener noreferrer">
-                <img src="/google-play-badge.webp" alt="Disponível no Google Play" width="162" height="50" loading="lazy" decoding="async" />
+                <img src="/google-play-badge.webp" alt="Disponível no Google Play" width="360" height="111" loading="lazy" decoding="async" />
               </a>
               <a href="https://apps.apple.com/br/app/bpf-cart%C3%B5es/id1579950979" target="_blank" rel="noopener noreferrer">
-                <img src="/app-store-badge.webp" alt="Baixar na App Store" width="162" height="50" loading="lazy" decoding="async" />
+                <img src="/app-store-badge.webp" alt="Baixar na App Store" width="360" height="111" loading="lazy" decoding="async" />
               </a>
             </div>
           </nav>

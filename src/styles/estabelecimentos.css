@@ -266,6 +266,12 @@
   background: var(--red);
   font-weight: 700;
   text-decoration: none;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.estabelecimentos-button > span {
+  display: inline-block;
+  transition: transform 180ms ease;
 }
 
 .estabelecimentos-button:hover {
@@ -424,29 +430,16 @@
   text-wrap: pretty;
 }
 
-/* The shared controller opts in to hiding only after observing an element. */
-.estabelecimentos-intro [data-reveal].reveal-ready,
-.estabelecimentos-providers [data-reveal].reveal-ready,
-.estabelecimentos-access [data-reveal].reveal-ready {
-  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1), transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.estabelecimentos-access .estabelecimentos-action.reveal-ready {
-  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms), transform 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms), box-shadow 280ms ease, border-color 280ms ease;
-}
-
-.estabelecimentos-intro [data-reveal].reveal-pending,
-.estabelecimentos-providers [data-reveal].reveal-pending,
-.estabelecimentos-access [data-reveal].reveal-pending {
-  opacity: 0;
-  transform: translateY(18px);
-}
-
-.estabelecimentos-action:nth-child(2) { --reveal-delay: 70ms; }
-.estabelecimentos-action:nth-child(3) { --reveal-delay: 140ms; }
-
 @media (hover: hover) and (pointer: fine) {
+  .estabelecimentos-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgb(68 8 12 / 16%);
+  }
+
+  .estabelecimentos-button:hover > span {
+    transform: translateX(2px);
+  }
+
   .estabelecimentos-action:hover {
     transform: translateY(-4px);
     border-color: rgb(205 32 38 / 22%);
@@ -502,6 +495,10 @@
 }
 
 @media (max-width: 36rem) {
+  .estabelecimentos-contact {
+    padding-block: var(--section-space-spacious);
+  }
+
   .estabelecimentos-info {
     grid-template-columns: 1fr;
   }
@@ -545,9 +542,6 @@
     display: none;
   }
 
-  .estabelecimentos-intro [data-reveal],
-  .estabelecimentos-providers [data-reveal],
-  .estabelecimentos-access [data-reveal],
   .estabelecimentos-action,
   .estabelecimentos-action__icon,
   .estabelecimentos-action__action svg {

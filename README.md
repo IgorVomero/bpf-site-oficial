@@ -118,3 +118,26 @@ Apache rules, so the alias must be verified when hosting is configured.
 The original archived PDFs are kept unchanged at `/site/adesao.pdf` and
 `/site/etica-e-integridade.pdf` for legacy links. They are downloaded only
 when requested.
+
+## Shared motion and mobile footer
+
+All seven page entries load `src/reveal.ts`. Add `data-reveal` to a meaningful
+composition (intro, image, CTA, or policy section), or `data-reveal-group` to an
+existing card grid. The controller observes each direct child of a group;
+no animation wrappers or per-card delays are needed. Avoid nesting reveal
+targets, and keep heroes and navigation outside the reveal system.
+
+Content is visible in the HTML and CSS by default. Only successfully observed
+blocks below the initial viewport are hidden. Entrances use opacity and a 20px
+CSS translation over 600ms, once per visit. Cards entering together stagger
+by 70ms on each row, capped at 210ms; stacked mobile cards have no cascade.
+When the section intro is also entering, cards give it a 70ms head start.
+Focus, anchor navigation, reduced-motion changes, and back/forward restoration
+leave content readable. Transition styles are released with an event and a
+timeout so normal interaction feedback remains independent of reveal motion.
+
+`global.css` owns reveal states, shared tap/focus feedback, and footer styling.
+At 48rem and below, the footer has a compact brand/address block, contact and
+access action rows, wrapping store badges, and a separated legal area. Its
+desktop grid and all existing destinations are preserved; WhatsApp uses the
+same action already present in the contact sections.
